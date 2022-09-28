@@ -7,7 +7,7 @@
 
 import UIKit
 
-class homeVC: UIViewController {
+class HomeVC: UIViewController {
 
     @IBOutlet weak var topArticlesCollectionView: UICollectionView!
     

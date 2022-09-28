@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="homeVC" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +126,7 @@
                             <constraint firstItem="v0H-Ca-V72" firstAttribute="top" secondItem="DyF-WP-2TR" secondAttribute="bottom" constant="12" id="utb-eY-hOA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Q2k-Ov-zTZ"/>
+                    <tabBarItem key="tabBarItem" title="" image="homeButton" selectedImage="homeButtonFill" id="Q2k-Ov-zTZ"/>
                     <navigationItem key="navigationItem" id="POi-YB-Sg1"/>
                     <connections>
                         <outlet property="topArticlesCollectionView" destination="xDA-rP-yYi" id="4Lm-Lz-y7u"/>
@@ -166,16 +166,56 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="J1B-Xg-fVp"/>
+                        <segue destination="hSr-ge-kdT" kind="relationship" relationship="viewControllers" id="wlO-Mv-cGZ"/>
+                        <segue destination="dwv-gm-Wia" kind="relationship" relationship="viewControllers" id="1ks-hZ-Nbw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auD-bW-Ghz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993.84615384615381" y="-34.123222748815166"/>
         </scene>
+        <!--SearchVC-->
+        <scene sceneID="3Hz-To-g1L">
+            <objects>
+                <viewController id="hSr-ge-kdT" customClass="SearchVC" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ehz-Mq-KMF">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g9f-ww-D2n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="searchButton" selectedImage="searchButtonFill" id="T8c-Wj-YGL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SgO-qg-qZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1817" y="141"/>
+        </scene>
+        <!--BookmarksVC-->
+        <scene sceneID="mj9-T0-ws6">
+            <objects>
+                <viewController id="dwv-gm-Wia" customClass="BookmarksVC" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P2v-6v-Ufc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sz3-9M-H6n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="bookmarksButton" selectedImage="bookmarksButtonFill" id="YfE-2c-3bx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9c7-V4-Ydd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1817" y="830"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bookmarksButton" width="32" height="32"/>
+        <image name="bookmarksButtonFill" width="68" height="48"/>
         <image name="flighyIcon" width="40.666667938232422" height="39.333332061767578"/>
+        <image name="homeButton" width="32" height="32"/>
+        <image name="homeButtonFill" width="68" height="48"/>
         <image name="hotelIcon" width="40.666667938232422" height="39.333332061767578"/>
+        <image name="searchButton" width="32" height="32"/>
+        <image name="searchButtonFill" width="68" height="48"/>
         <image name="unsplash_rsD_jv_A8Yo" width="390" height="455"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
