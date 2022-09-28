@@ -18,8 +18,7 @@ class homeVC: UIViewController {
     }
     
     func setupUI() {
-        topArticlesCollectionView.delegate = self
-        topArticlesCollectionView.dataSource = self
+
     }
 
     @IBAction func flightButtonTapped(_ sender: Any) {
@@ -30,19 +29,4 @@ class homeVC: UIViewController {
     
 }
 
-extension homeVC: UICollectionViewDelegate {
-    
-}
-
-extension homeVC: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 25
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = UICollectionViewCell()
-        return cell
-    }
-}
 
