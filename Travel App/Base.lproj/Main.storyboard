@@ -162,11 +162,11 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fqX-d8-tLa">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="J1B-Xg-fVp"/>
-                        <segue destination="hSr-ge-kdT" kind="relationship" relationship="viewControllers" id="wlO-Mv-cGZ"/>
+                        <segue destination="v66-FQ-l6d" kind="relationship" relationship="viewControllers" id="wlO-Mv-cGZ"/>
                         <segue destination="dwv-gm-Wia" kind="relationship" relationship="viewControllers" id="1ks-hZ-Nbw"/>
                     </connections>
                 </tabBarController>
@@ -174,21 +174,54 @@
             </objects>
             <point key="canvasLocation" x="993.84615384615381" y="-34.123222748815166"/>
         </scene>
-        <!--SearchVC-->
+        <!--Search-->
         <scene sceneID="3Hz-To-g1L">
             <objects>
                 <viewController id="hSr-ge-kdT" customClass="SearchVC" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ehz-Mq-KMF">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uil_cloud-info" translatesAutoresizingMaskIntoConstraints="NO" id="Bgt-Av-ysp">
+                                <rect key="frame" x="151.66666666666666" y="378.66666666666669" width="87" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="Glr-1t-PKx"/>
+                                    <constraint firstAttribute="width" constant="87" id="m4r-Oj-PBc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2t-5M-4mu">
+                                <rect key="frame" x="160.66666666666666" y="480" width="69" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.67843137254901964" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dd6-cI-xPX">
+                                <rect key="frame" x="0.0" y="143" width="390" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="g9f-ww-D2n"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dd6-cI-xPX" firstAttribute="top" secondItem="g9f-ww-D2n" secondAttribute="top" id="X70-2a-QHn"/>
+                            <constraint firstItem="g9f-ww-D2n" firstAttribute="trailing" secondItem="Dd6-cI-xPX" secondAttribute="trailing" id="YMz-Ub-ONY"/>
+                            <constraint firstItem="g9f-ww-D2n" firstAttribute="bottom" secondItem="Dd6-cI-xPX" secondAttribute="bottom" id="fMt-Ku-cNQ"/>
+                            <constraint firstItem="Bgt-Av-ysp" firstAttribute="centerY" secondItem="Ehz-Mq-KMF" secondAttribute="centerY" id="h4e-KV-k22"/>
+                            <constraint firstItem="Bgt-Av-ysp" firstAttribute="centerX" secondItem="Ehz-Mq-KMF" secondAttribute="centerX" id="moz-RP-oHD"/>
+                            <constraint firstItem="Dd6-cI-xPX" firstAttribute="leading" secondItem="g9f-ww-D2n" secondAttribute="leading" id="q3b-0k-MHi"/>
+                            <constraint firstItem="P2t-5M-4mu" firstAttribute="top" secondItem="Bgt-Av-ysp" secondAttribute="bottom" constant="14.5" id="qNn-Nf-7MS"/>
+                            <constraint firstItem="P2t-5M-4mu" firstAttribute="centerX" secondItem="Ehz-Mq-KMF" secondAttribute="centerX" id="qSX-vq-8Cm"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="searchButton" selectedImage="searchButtonFill" id="T8c-Wj-YGL"/>
+                    <navigationItem key="navigationItem" title="Search" id="fU3-gM-Rd4"/>
+                    <connections>
+                        <outlet property="noDataImageView" destination="Bgt-Av-ysp" id="xf8-Vx-72A"/>
+                        <outlet property="noDataLabel" destination="P2t-5M-4mu" id="ZfN-sa-Dqk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgO-qg-qZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="141"/>
+            <point key="canvasLocation" x="2746.1538461538462" y="140.75829383886256"/>
         </scene>
         <!--BookmarksVC-->
         <scene sceneID="mj9-T0-ws6">
@@ -198,13 +231,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="sz3-9M-H6n"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bookmarksButton" selectedImage="bookmarksButtonFill" id="YfE-2c-3bx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9c7-V4-Ydd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1817" y="830"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1pv-o1-Cnf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v66-FQ-l6d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="searchButton" selectedImage="searchButtonFill" id="T8c-Wj-YGL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="96C-Do-0eE">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hSr-ge-kdT" kind="relationship" relationship="rootViewController" id="dMK-vQ-K2E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ErX-rh-SPN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.9230769230769" y="140.75829383886256"/>
         </scene>
     </scenes>
     <resources>
@@ -216,6 +268,7 @@
         <image name="hotelIcon" width="40.666667938232422" height="39.333332061767578"/>
         <image name="searchButton" width="32" height="32"/>
         <image name="searchButtonFill" width="68" height="48"/>
+        <image name="uil_cloud-info" width="87" height="87"/>
         <image name="unsplash_rsD_jv_A8Yo" width="390" height="455"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
