@@ -284,16 +284,22 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="4"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KTI-Lb-usN">
+                                <rect key="frame" x="0.0" y="247" width="390" height="514"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g9f-ww-D2n"/>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="KTI-Lb-usN" firstAttribute="top" secondItem="HSK-pv-Gqh" secondAttribute="bottom" constant="25" id="36c-6h-Xyh"/>
                             <constraint firstItem="HSK-pv-Gqh" firstAttribute="top" secondItem="Oof-qh-Nja" secondAttribute="bottom" constant="24" id="3lF-sQ-qHO"/>
                             <constraint firstItem="DXy-39-IuR" firstAttribute="leading" secondItem="g9f-ww-D2n" secondAttribute="leading" constant="16" id="8Ml-Sa-zbQ"/>
                             <constraint firstItem="HSK-pv-Gqh" firstAttribute="leading" secondItem="g9f-ww-D2n" secondAttribute="leading" constant="16" id="9dv-kb-Ska"/>
                             <constraint firstItem="alJ-Dz-33b" firstAttribute="leading" secondItem="DXy-39-IuR" secondAttribute="trailing" constant="15" id="Ea0-iH-vJW"/>
                             <constraint firstItem="DXy-39-IuR" firstAttribute="top" secondItem="BOf-eg-YHX" secondAttribute="bottom" constant="20" id="GIw-49-dJJ"/>
                             <constraint firstItem="3VL-gf-UxQ" firstAttribute="leading" secondItem="Ehz-Mq-KMF" secondAttribute="leadingMargin" constant="90" id="LgC-cG-PX9"/>
+                            <constraint firstItem="g9f-ww-D2n" firstAttribute="bottom" secondItem="KTI-Lb-usN" secondAttribute="bottom" id="RRZ-xS-acF"/>
                             <constraint firstItem="Oof-qh-Nja" firstAttribute="leading" secondItem="Ehz-Mq-KMF" secondAttribute="leadingMargin" id="Xzw-SC-EIK"/>
                             <constraint firstItem="g9f-ww-D2n" firstAttribute="trailing" secondItem="HSK-pv-Gqh" secondAttribute="trailing" constant="16" id="dtH-PQ-B8N"/>
                             <constraint firstItem="Bgt-Av-ysp" firstAttribute="centerY" secondItem="Ehz-Mq-KMF" secondAttribute="centerY" id="h4e-KV-k22"/>
@@ -305,6 +311,8 @@
                             <constraint firstItem="P2t-5M-4mu" firstAttribute="top" secondItem="Bgt-Av-ysp" secondAttribute="bottom" constant="14.5" id="qNn-Nf-7MS"/>
                             <constraint firstItem="P2t-5M-4mu" firstAttribute="centerX" secondItem="Ehz-Mq-KMF" secondAttribute="centerX" id="qSX-vq-8Cm"/>
                             <constraint firstItem="BOf-eg-YHX" firstAttribute="leading" secondItem="g9f-ww-D2n" secondAttribute="leading" constant="16" id="vLe-mG-keV"/>
+                            <constraint firstItem="KTI-Lb-usN" firstAttribute="leading" secondItem="g9f-ww-D2n" secondAttribute="leading" id="wUI-Fe-IQz"/>
+                            <constraint firstItem="g9f-ww-D2n" firstAttribute="trailing" secondItem="KTI-Lb-usN" secondAttribute="trailing" id="zZL-Nb-5D3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="searchButton" selectedImage="searchButtonFill" id="ZMu-IX-ggy"/>
@@ -325,8 +333,28 @@
                     <view key="view" contentMode="scaleToFill" id="P2v-6v-Ufc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MX-LC-oBv">
+                                <rect key="frame" x="16" y="59" width="158" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F5F-6j-XBb">
+                                <rect key="frame" x="0.0" y="123" width="390" height="638"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sz3-9M-H6n"/>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F5F-6j-XBb" firstAttribute="top" secondItem="5MX-LC-oBv" secondAttribute="bottom" constant="28" id="PHB-h0-tre"/>
+                            <constraint firstItem="sz3-9M-H6n" firstAttribute="trailing" secondItem="F5F-6j-XBb" secondAttribute="trailing" id="jf8-V6-4gn"/>
+                            <constraint firstItem="5MX-LC-oBv" firstAttribute="top" secondItem="sz3-9M-H6n" secondAttribute="top" constant="12" id="mYV-60-42m"/>
+                            <constraint firstItem="F5F-6j-XBb" firstAttribute="leading" secondItem="sz3-9M-H6n" secondAttribute="leading" id="tHB-IE-G6Y"/>
+                            <constraint firstItem="5MX-LC-oBv" firstAttribute="leading" secondItem="sz3-9M-H6n" secondAttribute="leading" constant="16" id="tpV-7k-vkw"/>
+                            <constraint firstItem="sz3-9M-H6n" firstAttribute="bottom" secondItem="F5F-6j-XBb" secondAttribute="bottom" id="vir-Ap-HUY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bookmarksButton" selectedImage="bookmarksButtonFill" id="YfE-2c-3bx"/>
                 </viewController>
