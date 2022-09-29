@@ -22,9 +22,13 @@ class HomeVC: UIViewController {
     }
 
     @IBAction func flightButtonTapped(_ sender: Any) {
+        let flightVC = storyboard?.instantiateViewController(withIdentifier: "ListVC") as! ListVC
+        navigationController?.pushViewController(flightVC, animated: true)
     }
     
     @IBAction func hotelButtonTapped(_ sender: Any) {
+        let hotelVC = storyboard?.instantiateViewController(withIdentifier: "ListVC") as! ListVC
+        navigationController?.pushViewController(hotelVC, animated: true)
     }
     
 }

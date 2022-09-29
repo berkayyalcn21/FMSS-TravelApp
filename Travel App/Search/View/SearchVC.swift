@@ -9,9 +9,12 @@ import UIKit
 
 class SearchVC: UIViewController {
 
-    let searchController = UISearchController()
     @IBOutlet weak var noDataImageView: UIImageView!
     @IBOutlet weak var noDataLabel: UILabel!
+    @IBOutlet weak var hotelLine: UIView!
+    @IBOutlet weak var flightLine: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,17 +23,21 @@ class SearchVC: UIViewController {
     }
     
     func setupUI() {
-        searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
         noDataLabel.isHidden = true
         noDataImageView.isHidden = true
     }
+    
+    @IBAction func hotelButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func flightButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func searchButtonTapped(_ sender: Any) {
+    }
+    
+    
 }
 
-extension SearchVC: UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else { return }
-        print(text)
-    }
-}
