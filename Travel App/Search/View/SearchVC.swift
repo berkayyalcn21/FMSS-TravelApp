@@ -28,6 +28,8 @@ class SearchVC: UIViewController {
         noDataLabel.isHidden = true
         noDataImageView.isHidden = true
         flightLine.isHidden = true
+        
+        searchTextField.addTarget(self, action: #selector(searchTextFieldDidChange), for: .editingChanged)
     }
     
     @IBAction func hotelButtonTapped(_ sender: Any) {
@@ -49,6 +51,10 @@ class SearchVC: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
+    }
+    
+    @objc func searchTextFieldDidChange() {
+        print(searchTextField.text!)
     }
     
     
