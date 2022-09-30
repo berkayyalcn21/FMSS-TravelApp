@@ -35,6 +35,8 @@ class SearchVC: UIViewController {
         flightLine.isHidden = true
         hotelButton.setTitleColor(UIColor(named: "selectedButtonColor"), for: .normal)
         flightButton.setTitleColor(UIColor(named: "defaultButtonColor"), for: .normal)
+        hotelButton.setImage(UIImage(named: "searchHotelIconFill"), for: .normal)
+        flightButton.setImage(UIImage(named: "searchFlightIcon"), for: .normal)
     }
     
     @IBAction func flightButtonTapped(_ sender: Any) {
@@ -42,6 +44,8 @@ class SearchVC: UIViewController {
         flightLine.isHidden = false
         hotelButton.setTitleColor(UIColor(named: "defaultButtonColor"), for: .normal)
         flightButton.setTitleColor(UIColor(named: "selectedButtonColor"), for: .normal)
+        hotelButton.setImage(UIImage(named: "searchHotelIcon"), for: .normal)
+        flightButton.setImage(UIImage(named: "searchFlightIconFill"), for: .normal)
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {

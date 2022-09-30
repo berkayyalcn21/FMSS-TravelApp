@@ -340,10 +340,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXy-39-IuR">
-                                <rect key="frame" x="16" y="115" width="75" height="25"/>
+                                <rect key="frame" x="16" y="115" width="80" height="25"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Hotel" image="hotelIconFill">
+                                <state key="normal" title=" Hotel" image="searchHotelIconFill">
                                     <color key="titleColor" red="1" green="0.27843137254901962" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -351,10 +351,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alJ-Dz-33b">
-                                <rect key="frame" x="106" y="115" width="88" height="24"/>
+                                <rect key="frame" x="111" y="115" width="93" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Flights" image="flightIcon">
+                                <state key="normal" title=" Flights" image="searchFlightIcon">
                                     <color key="titleColor" red="0.76078431372549016" green="0.77254901960784317" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -362,7 +362,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oof-qh-Nja">
-                                <rect key="frame" x="16" y="147" width="75" height="3"/>
+                                <rect key="frame" x="19" y="147" width="75" height="3"/>
                                 <color key="backgroundColor" red="1" green="0.27843137254901962" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="5NX-iC-25V"/>
@@ -370,7 +370,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VL-gf-UxQ">
-                                <rect key="frame" x="106" y="147" width="88" height="3"/>
+                                <rect key="frame" x="109" y="147" width="88" height="3"/>
                                 <color key="backgroundColor" red="1" green="0.27843137254901962" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="TFz-f7-eof"/>
@@ -446,9 +446,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                             <constraint firstItem="HSK-pv-Gqh" firstAttribute="leading" secondItem="g9f-ww-D2n" secondAttribute="leading" constant="16" id="9dv-kb-Ska"/>
                             <constraint firstItem="alJ-Dz-33b" firstAttribute="leading" secondItem="DXy-39-IuR" secondAttribute="trailing" constant="15" id="Ea0-iH-vJW"/>
                             <constraint firstItem="DXy-39-IuR" firstAttribute="top" secondItem="BOf-eg-YHX" secondAttribute="bottom" constant="20" id="GIw-49-dJJ"/>
-                            <constraint firstItem="3VL-gf-UxQ" firstAttribute="leading" secondItem="Ehz-Mq-KMF" secondAttribute="leadingMargin" constant="90" id="LgC-cG-PX9"/>
+                            <constraint firstItem="3VL-gf-UxQ" firstAttribute="leading" secondItem="Ehz-Mq-KMF" secondAttribute="leadingMargin" constant="93" id="LgC-cG-PX9"/>
                             <constraint firstItem="g9f-ww-D2n" firstAttribute="bottom" secondItem="KTI-Lb-usN" secondAttribute="bottom" id="RRZ-xS-acF"/>
-                            <constraint firstItem="Oof-qh-Nja" firstAttribute="leading" secondItem="Ehz-Mq-KMF" secondAttribute="leadingMargin" id="Xzw-SC-EIK"/>
+                            <constraint firstItem="Oof-qh-Nja" firstAttribute="leading" secondItem="Ehz-Mq-KMF" secondAttribute="leadingMargin" constant="3" id="Xzw-SC-EIK"/>
                             <constraint firstItem="g9f-ww-D2n" firstAttribute="trailing" secondItem="HSK-pv-Gqh" secondAttribute="trailing" constant="16" id="dtH-PQ-B8N"/>
                             <constraint firstItem="Bgt-Av-ysp" firstAttribute="centerY" secondItem="Ehz-Mq-KMF" secondAttribute="centerY" id="h4e-KV-k22"/>
                             <constraint firstItem="alJ-Dz-33b" firstAttribute="top" secondItem="BOf-eg-YHX" secondAttribute="bottom" constant="20" id="j4s-Jj-FxV"/>
@@ -525,14 +525,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
         <image name="bookmarksButton" width="32" height="32"/>
         <image name="bookmarksButtonFill" width="68" height="48"/>
         <image name="carbon_arrow-left" width="32" height="32"/>
-        <image name="flightIcon" width="24" height="24"/>
         <image name="flighyIcon" width="40.666667938232422" height="39.333332061767578"/>
         <image name="homeButton" width="32" height="32"/>
         <image name="homeButtonFill" width="68" height="48"/>
         <image name="hotelIcon" width="40.666667938232422" height="39.333332061767578"/>
-        <image name="hotelIconFill" width="24" height="24.333333969116211"/>
         <image name="searchButton" width="32" height="32"/>
         <image name="searchButtonFill" width="68" height="48"/>
+        <image name="searchFlightIcon" width="24" height="24"/>
+        <image name="searchHotelIconFill" width="24" height="24.333333969116211"/>
         <image name="searchIcon" width="24" height="24"/>
         <image name="uil_cloud-info" width="87" height="87"/>
         <image name="unsplash_rsD_jv_A8Yo" width="390" height="455"/>
