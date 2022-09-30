@@ -21,6 +21,7 @@
 		F0590F5F28E4615E003BF6D3 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0590F5D28E4615E003BF6D3 /* SearchTableViewCell.xib */; };
 		F094E7B128E5E0490082CDCC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094E7AF28E5E0490082CDCC /* ListTableViewCell.swift */; };
 		F094E7B228E5E0490082CDCC /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094E7B028E5E0490082CDCC /* ListTableViewCell.xib */; };
+		F094E7B528E5E4E80082CDCC /* homeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094E7B428E5E4E80082CDCC /* homeEntity.swift */; };
 		F098926A28E5AB3D003D7C16 /* homeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098926928E5AB3D003D7C16 /* homeVM.swift */; };
 		F098926C28E5AB63003D7C16 /* homeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098926B28E5AB63003D7C16 /* homeModel.swift */; };
 		F098927228E5AB9C003D7C16 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098927128E5AB9C003D7C16 /* SearchVM.swift */; };
@@ -56,6 +57,7 @@
 		F0590F5D28E4615E003BF6D3 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		F094E7AF28E5E0490082CDCC /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		F094E7B028E5E0490082CDCC /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		F094E7B428E5E4E80082CDCC /* homeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeEntity.swift; sourceTree = "<group>"; };
 		F098926928E5AB3D003D7C16 /* homeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVM.swift; sourceTree = "<group>"; };
 		F098926B28E5AB63003D7C16 /* homeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeModel.swift; sourceTree = "<group>"; };
 		F098927128E5AB9C003D7C16 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
@@ -119,9 +121,18 @@
 			path = "Travel App";
 			sourceTree = "<group>";
 		};
+		F094E7B328E5E4DE0082CDCC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F094E7B428E5E4E80082CDCC /* homeEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		F098926428E5AAFA003D7C16 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F094E7B328E5E4DE0082CDCC /* Entity */,
 				F098926728E5AB0D003D7C16 /* Model */,
 				F098926628E5AB07003D7C16 /* ViewModel */,
 				F098926528E5AB03003D7C16 /* View */,
@@ -407,6 +418,7 @@
 				F098927E28E5AC09003D7C16 /* BookmarksVM.swift in Sources */,
 				F01AEDC728E3166900D4C730 /* SceneDelegate.swift in Sources */,
 				F0590F5E28E4615E003BF6D3 /* SearchTableViewCell.swift in Sources */,
+				F094E7B528E5E4E80082CDCC /* homeEntity.swift in Sources */,
 				F098929828E5BDA8003D7C16 /* ListVM.swift in Sources */,
 				F098929428E5BD96003D7C16 /* ListEntity.swift in Sources */,
 				F098928F28E5BD77003D7C16 /* DetailModel.swift in Sources */,

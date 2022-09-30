@@ -15,6 +15,8 @@ class SearchVC: UIViewController {
     @IBOutlet weak var flightLine: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var hotelButton: UIButton!
+    @IBOutlet weak var flightButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +27,21 @@ class SearchVC: UIViewController {
     func setupUI() {
         noDataLabel.isHidden = true
         noDataImageView.isHidden = true
+        flightLine.isHidden = true
     }
     
     @IBAction func hotelButtonTapped(_ sender: Any) {
-        
+        hotelLine.isHidden = false
+        flightLine.isHidden = true
+        hotelButton.setTitleColor(UIColor(named: "selectedButtonColor"), for: .normal)
+        flightButton.setTitleColor(UIColor(named: "defaultButtonColor"), for: .normal)
     }
     
     @IBAction func flightButtonTapped(_ sender: Any) {
-        
+        hotelLine.isHidden = true
+        flightLine.isHidden = false
+        hotelButton.setTitleColor(UIColor(named: "defaultButtonColor"), for: .normal)
+        flightButton.setTitleColor(UIColor(named: "selectedButtonColor"), for: .normal)
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {

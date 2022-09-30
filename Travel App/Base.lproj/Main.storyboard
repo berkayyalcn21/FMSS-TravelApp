@@ -88,9 +88,9 @@
                                 <color key="textColor" red="0.16078431372549018" green="0.17254901960784313" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-rP-yYi">
-                                <rect key="frame" x="20" y="512" width="370" height="224"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-rP-yYi">
+                                <rect key="frame" x="0.0" y="512" width="390" height="224"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PXb-vA-4Ad">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -122,7 +122,7 @@
                             <constraint firstItem="xDA-rP-yYi" firstAttribute="top" secondItem="cUB-WW-El2" secondAttribute="bottom" constant="8" id="mev-j3-ZDK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xDA-rP-yYi" secondAttribute="bottom" constant="25" id="mmn-hV-bUL"/>
                             <constraint firstItem="hlr-rz-zPZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rVf-oq-Jfe"/>
-                            <constraint firstItem="xDA-rP-yYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uOM-gx-5h3"/>
+                            <constraint firstItem="xDA-rP-yYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uOM-gx-5h3"/>
                             <constraint firstItem="v0H-Ca-V72" firstAttribute="top" secondItem="DyF-WP-2TR" secondAttribute="bottom" constant="12" id="utb-eY-hOA"/>
                         </constraints>
                     </view>
@@ -210,7 +210,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwU-iR-p1t">
                                 <rect key="frame" x="38" y="715" width="314" height="54"/>
-                                <color key="backgroundColor" red="1" green="0.27843137254901962" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.2784313725" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="gTb-58-0ND"/>
                                 </constraints>
@@ -371,6 +371,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VL-gf-UxQ">
                                 <rect key="frame" x="106" y="147" width="88" height="3"/>
+                                <color key="backgroundColor" red="1" green="0.27843137254901962" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="TFz-f7-eof"/>
                                     <constraint firstAttribute="height" constant="3" id="Y3P-Zs-JxS"/>
@@ -465,7 +466,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est vel odio elementum 
                     <tabBarItem key="tabBarItem" title="" image="searchButton" selectedImage="searchButtonFill" id="ZMu-IX-ggy"/>
                     <navigationItem key="navigationItem" title="Search" id="fU3-gM-Rd4"/>
                     <connections>
+                        <outlet property="flightButton" destination="alJ-Dz-33b" id="6aw-ck-gdx"/>
                         <outlet property="flightLine" destination="3VL-gf-UxQ" id="SeI-bx-sxU"/>
+                        <outlet property="hotelButton" destination="DXy-39-IuR" id="beq-BS-BKl"/>
                         <outlet property="hotelLine" destination="Oof-qh-Nja" id="n5O-14-xc4"/>
                         <outlet property="noDataImageView" destination="Bgt-Av-ysp" id="xf8-Vx-72A"/>
                         <outlet property="noDataLabel" destination="P2t-5M-4mu" id="ZfN-sa-Dqk"/>
