@@ -38,6 +38,7 @@
 		F098929628E5BDA0003D7C16 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929528E5BDA0003D7C16 /* ListModel.swift */; };
 		F098929828E5BDA8003D7C16 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929728E5BDA8003D7C16 /* ListVM.swift */; };
 		F098929A28E5BDB3003D7C16 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929928E5BDB3003D7C16 /* ListVC.swift */; };
+		F0FB3C9F28E8ABF000130912 /* ArticlesData.json in Resources */ = {isa = PBXBuildFile; fileRef = F0FB3C9E28E8ABF000130912 /* ArticlesData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		F098929528E5BDA0003D7C16 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		F098929728E5BDA8003D7C16 /* ListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVM.swift; sourceTree = "<group>"; };
 		F098929928E5BDB3003D7C16 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		F0FB3C9E28E8ABF000130912 /* ArticlesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ArticlesData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		F01AEDC328E3166900D4C730 /* Travel App */ = {
 			isa = PBXGroup;
 			children = (
+				F0FB3C9E28E8ABF000130912 /* ArticlesData.json */,
 				F0FB3C9D28E89FC700130912 /* Supports */,
 				F098928628E5BD32003D7C16 /* Detail */,
 				F098928128E5B902003D7C16 /* List */,
@@ -395,6 +398,7 @@
 				F01AEDDB28E3454700D4C730 /* topPickArtickesCell.xib in Resources */,
 				F01AEDD128E3166A00D4C730 /* LaunchScreen.storyboard in Resources */,
 				F01AEDCE28E3166A00D4C730 /* Assets.xcassets in Resources */,
+				F0FB3C9F28E8ABF000130912 /* ArticlesData.json in Resources */,
 				F098927C28E5ABE0003D7C16 /* bookmarksTableViewCell.xib in Resources */,
 				F01AEDCC28E3166900D4C730 /* Main.storyboard in Resources */,
 				F0590F5F28E4615E003BF6D3 /* SearchTableViewCell.xib in Resources */,

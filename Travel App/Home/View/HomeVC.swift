@@ -11,12 +11,14 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var topArticlesCollectionView: UICollectionView!
     private let topAriclesCollection = "topPickArtickesCell"
-    let homeDataList: [HomeData] = []
+    private let homeVM = HomeVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        homeVM.viewModelDelegate = self
+        homeVM.didViewLoad()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -52,15 +54,22 @@ extension HomeVC: UICollectionViewDelegate {
 extension HomeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return homeVM.numberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let homeData = homeDataList[indexPath.row]
+        let cellModel = homeVM.getModel(at: indexPath.row)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: topAriclesCollection, for: indexPath) as! topPickArtickesCell
-        cell.imageView.image = UIImage(named: "unsplash_rsD_jv_A8Yo")
-        cell.categoryLabel.text = "Shop"
-        cell.titleLabel.text = "Beautiful Alley Scene in Old Town in Europe at Sunset"
+        if let url = cellModel.images {
+            DispatchQueue.global().async {
+                let data = try! Data(contentsOf: URL(string: url)!)
+                DispatchQueue.main.async {
+                    cell.imageView.image = UIImage(data: data)
+                }
+            }
+        }
+        cell.categoryLabel.text = cellModel.category
+        cell.titleLabel.text = cellModel.title
         return cell
     }
 }
@@ -77,5 +86,17 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 30
+    }
+}
+
+
+extension HomeVC: HomeVMToHomeVCProtocol {
+    
+    func sendDataIsFinish(_ isSuccess: Bool) {
+        if isSuccess {
+            DispatchQueue.main.async {
+                self.topArticlesCollectionView.reloadData()
+            }
+        }
     }
 }

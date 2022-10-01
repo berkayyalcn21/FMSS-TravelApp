@@ -8,10 +8,14 @@
 import Foundation
 
 
-class HomeData {
-    
-    var image: String?
-    var category: String?
-    var title: String?
-    var desc: String?
+struct Article: Decodable {
+    let id: Int?
+    let category: String?
+    let images: String?
+    let description: String?
+    let title: String?
+}
+
+struct Articles: Decodable {
+    let aritcles: [Article]?
 }
