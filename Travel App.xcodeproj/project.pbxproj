@@ -106,15 +106,13 @@
 		F01AEDC328E3166900D4C730 /* Travel App */ = {
 			isa = PBXGroup;
 			children = (
+				F0FB3C9D28E89FC700130912 /* Supports */,
 				F098928628E5BD32003D7C16 /* Detail */,
 				F098928128E5B902003D7C16 /* List */,
 				F098927528E5ABAF003D7C16 /* Bookmarks */,
 				F098926D28E5AB6B003D7C16 /* Search */,
 				F098926428E5AAFA003D7C16 /* Home */,
-				F01AEDC428E3166900D4C730 /* AppDelegate.swift */,
-				F01AEDC628E3166900D4C730 /* SceneDelegate.swift */,
 				F01AEDCA28E3166900D4C730 /* Main.storyboard */,
-				F01AEDCD28E3166A00D4C730 /* Assets.xcassets */,
 				F01AEDCF28E3166A00D4C730 /* LaunchScreen.storyboard */,
 				F01AEDD228E3166A00D4C730 /* Info.plist */,
 			);
@@ -324,6 +322,16 @@
 				F098929128E5BD84003D7C16 /* DetailEntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		F0FB3C9D28E89FC700130912 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				F01AEDCD28E3166A00D4C730 /* Assets.xcassets */,
+				F01AEDC428E3166900D4C730 /* AppDelegate.swift */,
+				F01AEDC628E3166900D4C730 /* SceneDelegate.swift */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

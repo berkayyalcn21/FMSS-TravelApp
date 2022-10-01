@@ -32,22 +32,30 @@ class SearchVC: UIViewController {
         searchTextField.addTarget(self, action: #selector(searchTextFieldDidChange), for: .editingChanged)
     }
     
+    func changeButtonColor(_ isChange: Bool) {
+        if isChange {
+            hotelLine.isHidden = false
+            flightLine.isHidden = true
+            hotelButton.setTitleColor(UIColor(named: "selectedButtonColor"), for: .normal)
+            flightButton.setTitleColor(UIColor(named: "defaultButtonColor"), for: .normal)
+            hotelButton.setImage(UIImage(named: "searchHotelIconFill"), for: .normal)
+            flightButton.setImage(UIImage(named: "searchFlightIcon"), for: .normal)
+        }else {
+            hotelLine.isHidden = true
+            flightLine.isHidden = false
+            hotelButton.setTitleColor(UIColor(named: "defaultButtonColor"), for: .normal)
+            flightButton.setTitleColor(UIColor(named: "selectedButtonColor"), for: .normal)
+            hotelButton.setImage(UIImage(named: "searchHotelIcon"), for: .normal)
+            flightButton.setImage(UIImage(named: "searchFlightIconFill"), for: .normal)
+        }
+    }
+    
     @IBAction func hotelButtonTapped(_ sender: Any) {
-        hotelLine.isHidden = false
-        flightLine.isHidden = true
-        hotelButton.setTitleColor(UIColor(named: "selectedButtonColor"), for: .normal)
-        flightButton.setTitleColor(UIColor(named: "defaultButtonColor"), for: .normal)
-        hotelButton.setImage(UIImage(named: "searchHotelIconFill"), for: .normal)
-        flightButton.setImage(UIImage(named: "searchFlightIcon"), for: .normal)
+        changeButtonColor(true)
     }
     
     @IBAction func flightButtonTapped(_ sender: Any) {
-        hotelLine.isHidden = true
-        flightLine.isHidden = false
-        hotelButton.setTitleColor(UIColor(named: "defaultButtonColor"), for: .normal)
-        flightButton.setTitleColor(UIColor(named: "selectedButtonColor"), for: .normal)
-        hotelButton.setImage(UIImage(named: "searchHotelIcon"), for: .normal)
-        flightButton.setImage(UIImage(named: "searchFlightIconFill"), for: .normal)
+        changeButtonColor(false)
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
