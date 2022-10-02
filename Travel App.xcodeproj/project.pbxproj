@@ -39,6 +39,7 @@
 		F098929828E5BDA8003D7C16 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929728E5BDA8003D7C16 /* ListVM.swift */; };
 		F098929A28E5BDB3003D7C16 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929928E5BDB3003D7C16 /* ListVC.swift */; };
 		F0FB3C9F28E8ABF000130912 /* ArticlesData.json in Resources */ = {isa = PBXBuildFile; fileRef = F0FB3C9E28E8ABF000130912 /* ArticlesData.json */; };
+		F0FB3CA428E95DB200130912 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F0FB3CA328E95DB200130912 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FB3CA428E95DB200130912 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +110,6 @@
 		F01AEDC328E3166900D4C730 /* Travel App */ = {
 			isa = PBXGroup;
 			children = (
-				F0FB3C9E28E8ABF000130912 /* ArticlesData.json */,
 				F0FB3C9D28E89FC700130912 /* Supports */,
 				F098928628E5BD32003D7C16 /* Detail */,
 				F098928128E5B902003D7C16 /* List */,
@@ -125,6 +126,7 @@
 		F094E7B328E5E4DE0082CDCC /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				F0FB3C9E28E8ABF000130912 /* ArticlesData.json */,
 				F094E7B428E5E4E80082CDCC /* homeEntity.swift */,
 			);
 			path = Entity;
@@ -353,6 +355,9 @@
 			dependencies = (
 			);
 			name = "Travel App";
+			packageProductDependencies = (
+				F0FB3CA328E95DB200130912 /* Kingfisher */,
+			);
 			productName = "Travel App";
 			productReference = F01AEDC128E3166900D4C730 /* Travel App.app */;
 			productType = "com.apple.product-type.application";
@@ -381,6 +386,9 @@
 				Base,
 			);
 			mainGroup = F01AEDB828E3166900D4C730;
+			packageReferences = (
+				F0FB3CA228E95DB200130912 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = F01AEDC228E3166900D4C730 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -658,6 +666,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F0FB3CA228E95DB200130912 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F0FB3CA328E95DB200130912 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0FB3CA228E95DB200130912 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F01AEDB928E3166900D4C730 /* Project object */;
 }
