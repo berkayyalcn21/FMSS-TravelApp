@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeVC: UIViewController {
 
@@ -49,6 +50,8 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
 }
 
 extension HomeVC: UICollectionViewDataSource {
@@ -61,11 +64,8 @@ extension HomeVC: UICollectionViewDataSource {
         let cellModel = homeVM.getModel(at: indexPath.row)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: topAriclesCollection, for: indexPath) as! topPickArtickesCell
         if let url = cellModel.images {
-            DispatchQueue.global().async {
-                let data = try! Data(contentsOf: URL(string: url)!)
-                DispatchQueue.main.async {
-                    cell.imageView.image = UIImage(data: data)
-                }
+            DispatchQueue.main.async {
+                cell.imageView.kf.setImage(with: URL(string: url))
             }
         }
         cell.categoryLabel.text = cellModel.category

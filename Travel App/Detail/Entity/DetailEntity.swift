@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+
+struct DetailEntity {
+    
+    var id: Int?
+    var image: String?
+    var category: String?
+    var title: String?
+    var desc: String?
+}
