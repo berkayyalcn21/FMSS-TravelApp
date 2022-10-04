@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+protocol DetailModelToDetailVMProtocol: AnyObject {
+    func sendData(isComplete: Bool)
+}
+
+class DetailModel {
+    
+    static var sharedDetail = DetailModel()
+    weak var detailModelDelegate: DetailModelToDetailVMProtocol?
+    
+    func getArticle() {
+        
+    }
+
+}
