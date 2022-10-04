@@ -9,15 +9,15 @@ import Foundation
 
 
 // MARK: - Welcome
-struct Welcome: Codable {
-    let version: Int
-    let rows: [Row]
+struct Flights: Decodable {
+    let version: Int?
+    let rows: [Row]?
 }
 
 // MARK: - Row
-struct Row: Codable {
-    let rowDescription: String
-    let models: [Model]
+struct Row: Decodable {
+    let rowDescription: String?
+    let models: [Model]?
 
     enum CodingKeys: String, CodingKey {
         case rowDescription = "description"
@@ -26,8 +26,8 @@ struct Row: Codable {
 }
 
 // MARK: - Model
-struct Model: Codable {
-    let name, code: String
+struct Model: Decodable {
+    let name, code: String?
 
     enum CodingKeys: String, CodingKey {
         case name = "Name"

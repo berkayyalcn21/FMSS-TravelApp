@@ -38,12 +38,14 @@ class HomeVC: UIViewController {
 
     @IBAction func flightButtonTapped(_ sender: Any) {
         let flightVC = storyboard?.instantiateViewController(withIdentifier: "ListVC") as! ListVC
-//        flightVC.listTitleLabel.text = "Flight"
+        flightVC.whitchButton = "flight"
+        flightVC.topTitle = "Flight"
         navigationController?.pushViewController(flightVC, animated: true)
     }
     
     @IBAction func hotelButtonTapped(_ sender: Any) {
         let hotelVC = storyboard?.instantiateViewController(withIdentifier: "ListVC") as! ListVC
+        hotelVC.whitchButton = "hotel"
         hotelVC.topTitle = "Hotel"
         navigationController?.pushViewController(hotelVC, animated: true)
     }

@@ -24,6 +24,7 @@
 		F094E7B528E5E4E80082CDCC /* homeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094E7B428E5E4E80082CDCC /* homeEntity.swift */; };
 		F096D3D828EB6996003CAC57 /* FlightEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096D3D728EB6996003CAC57 /* FlightEntity.swift */; };
 		F096D3DB28EB6AE7003CAC57 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F096D3DA28EB6AE7003CAC57 /* Alamofire */; };
+		F096D3DD28EC6FB3003CAC57 /* ListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096D3DC28EC6FB3003CAC57 /* ListEntity.swift */; };
 		F098926A28E5AB3D003D7C16 /* homeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098926928E5AB3D003D7C16 /* homeVM.swift */; };
 		F098926C28E5AB63003D7C16 /* homeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098926B28E5AB63003D7C16 /* homeModel.swift */; };
 		F098927228E5AB9C003D7C16 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098927128E5AB9C003D7C16 /* SearchVM.swift */; };
@@ -63,6 +64,7 @@
 		F094E7B028E5E0490082CDCC /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		F094E7B428E5E4E80082CDCC /* homeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeEntity.swift; sourceTree = "<group>"; };
 		F096D3D728EB6996003CAC57 /* FlightEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightEntity.swift; sourceTree = "<group>"; };
+		F096D3DC28EC6FB3003CAC57 /* ListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntity.swift; sourceTree = "<group>"; };
 		F098926928E5AB3D003D7C16 /* homeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVM.swift; sourceTree = "<group>"; };
 		F098926B28E5AB63003D7C16 /* homeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeModel.swift; sourceTree = "<group>"; };
 		F098927128E5AB9C003D7C16 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			children = (
 				F098929328E5BD96003D7C16 /* HotelEntity.swift */,
 				F096D3D728EB6996003CAC57 /* FlightEntity.swift */,
+				F096D3DC28EC6FB3003CAC57 /* ListEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				F098927228E5AB9C003D7C16 /* SearchVM.swift in Sources */,
 				F0590F3B28E435E4003BF6D3 /* BookmarksVC.swift in Sources */,
 				F098929A28E5BDB3003D7C16 /* ListVC.swift in Sources */,
+				F096D3DD28EC6FB3003CAC57 /* ListEntity.swift in Sources */,
 				F098927E28E5AC09003D7C16 /* BookmarksVM.swift in Sources */,
 				F01AEDC728E3166900D4C730 /* SceneDelegate.swift in Sources */,
 				F0590F5E28E4615E003BF6D3 /* SearchTableViewCell.swift in Sources */,

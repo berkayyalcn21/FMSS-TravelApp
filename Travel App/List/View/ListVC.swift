@@ -15,6 +15,7 @@ class ListVC: UIViewController {
     private let listTableViewId = "ListTableViewCell"
     let viewModel = ListVM()
     var topTitle: String = ""
+    var whitchButton: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,13 @@ class ListVC: UIViewController {
         listTableView.delegate = self
         listTableView.dataSource = self
         viewModel.listVMDelegate = self
+        if whitchButton == "hotel" {
+            viewModel.hotelOrFlight = .hotel
+            print("otel")
+        }else {
+            viewModel.hotelOrFlight = .flight
+            print("uçak")
+        }
         viewModel.didViewLoad()
     }
     
@@ -64,9 +72,13 @@ extension ListVC: UITableViewDataSource {
             self.listActivity.stopAnimating()
         }
         let cell = listTableView.dequeueReusableCell(withIdentifier: listTableViewId, for: indexPath) as! ListTableViewCell
-        cell.ListImageView.image = UIImage(named: "bg-5")
-        cell.ListTitleLabel.text = cellModel.name
-        cell.ListDescLabel.text = cellModel.hcomLocale
+        if whitchButton == "hotel" {
+            cell.ListImageView.image = UIImage(named: "bg-7")
+        }else {
+            cell.ListImageView.image = UIImage(named: "bg-8")
+        }
+        cell.ListTitleLabel.text = cellModel.listTitle
+        cell.ListDescLabel.text = cellModel.listDesc
         cell.layer.cornerRadius = 20
         return cell
     }
