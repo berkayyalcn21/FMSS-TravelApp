@@ -55,7 +55,11 @@ extension ListVC: UITableViewDelegate {
         let cellModel = viewModel.getModel(at: indexPath.row)
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
         detailVC.data = cellModel as AnyObject
-        detailVC.dataType = .hotel
+        if whitchButton == "hotel" {
+            detailVC.dataType = .hotel
+        }else {
+            detailVC.dataType = .flight
+        }
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }

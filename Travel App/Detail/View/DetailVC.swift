@@ -20,30 +20,6 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch dataType {
-        case .article:
-            if let data = data as? Article {
-                if let url = data.images {
-                    DispatchQueue.main.async {
-                        self.imageView.kf.setImage(with: URL(string: url))
-                    }
-                }
-                categoryLabel.text = data.category
-                titleLabel.text = data.title
-                descLabel.text = data.description
-            }
-        case .flight:
-            var _: Article?
-        case .hotel:
-            if let data = data as? HotelEntity {
-                imageView.image = UIImage(named: "bg-6")
-                categoryLabel.text = "Travel"
-                titleLabel.text = data.name
-                descLabel.text = descText
-            }
-        case .none: break
-        }
-        
         setupUI()
     }
     
@@ -57,6 +33,35 @@ class DetailVC: UIViewController {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 32
         imageView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        switch dataType {
+        case .article:
+            if let data = data as? Article {
+                if let url = data.images {
+                    DispatchQueue.main.async {
+                        self.imageView.kf.setImage(with: URL(string: url))
+                    }
+                }
+                categoryLabel.text = data.category
+                titleLabel.text = data.title
+                descLabel.text = data.description
+            }
+        case .flight:
+            if let data = data as? ListEntity {
+                imageView.image = UIImage(named: "bg-8-1")
+                categoryLabel.text = "Travel"
+                titleLabel.text = data.listTitle
+                descLabel.text = descText
+            }
+        case .hotel:
+            if let data = data as? ListEntity {
+                imageView.image = UIImage(named: "bg-6")
+                categoryLabel.text = "Travel"
+                titleLabel.text = data.listTitle
+                descLabel.text = descText
+            }
+        case .none: break
+        }
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
