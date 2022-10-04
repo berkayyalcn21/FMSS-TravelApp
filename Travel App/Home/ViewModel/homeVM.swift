@@ -35,7 +35,7 @@ class HomeVM {
     func getModel(at index: Int) -> Article {
         let article = model.articlesList[index]
         return article
-     }
+    }
 
 }
 

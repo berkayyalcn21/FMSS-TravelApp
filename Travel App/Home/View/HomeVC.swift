@@ -38,19 +38,25 @@ class HomeVC: UIViewController {
 
     @IBAction func flightButtonTapped(_ sender: Any) {
         let flightVC = storyboard?.instantiateViewController(withIdentifier: "ListVC") as! ListVC
+//        flightVC.listTitleLabel.text = "Flight"
         navigationController?.pushViewController(flightVC, animated: true)
     }
     
     @IBAction func hotelButtonTapped(_ sender: Any) {
         let hotelVC = storyboard?.instantiateViewController(withIdentifier: "ListVC") as! ListVC
+        hotelVC.topTitle = "Hotel"
         navigationController?.pushViewController(hotelVC, animated: true)
     }
-    
 }
 
 extension HomeVC: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cellModel = homeVM.getModel(at: indexPath.row)
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
+        detailVC.data = cellModel as AnyObject
+        detailVC.dataType = .article
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
