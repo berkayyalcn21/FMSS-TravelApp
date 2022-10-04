@@ -22,6 +22,8 @@
 		F094E7B128E5E0490082CDCC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094E7AF28E5E0490082CDCC /* ListTableViewCell.swift */; };
 		F094E7B228E5E0490082CDCC /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094E7B028E5E0490082CDCC /* ListTableViewCell.xib */; };
 		F094E7B528E5E4E80082CDCC /* homeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094E7B428E5E4E80082CDCC /* homeEntity.swift */; };
+		F096D3D828EB6996003CAC57 /* FlightEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F096D3D728EB6996003CAC57 /* FlightEntity.swift */; };
+		F096D3DB28EB6AE7003CAC57 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F096D3DA28EB6AE7003CAC57 /* Alamofire */; };
 		F098926A28E5AB3D003D7C16 /* homeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098926928E5AB3D003D7C16 /* homeVM.swift */; };
 		F098926C28E5AB63003D7C16 /* homeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098926B28E5AB63003D7C16 /* homeModel.swift */; };
 		F098927228E5AB9C003D7C16 /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098927128E5AB9C003D7C16 /* SearchVM.swift */; };
@@ -34,7 +36,7 @@
 		F098928D28E5BD6D003D7C16 /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098928C28E5BD6D003D7C16 /* DetailVM.swift */; };
 		F098928F28E5BD77003D7C16 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098928E28E5BD77003D7C16 /* DetailModel.swift */; };
 		F098929228E5BD84003D7C16 /* DetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929128E5BD84003D7C16 /* DetailEntity.swift */; };
-		F098929428E5BD96003D7C16 /* ListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929328E5BD96003D7C16 /* ListEntity.swift */; };
+		F098929428E5BD96003D7C16 /* HotelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929328E5BD96003D7C16 /* HotelEntity.swift */; };
 		F098929628E5BDA0003D7C16 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929528E5BDA0003D7C16 /* ListModel.swift */; };
 		F098929828E5BDA8003D7C16 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929728E5BDA8003D7C16 /* ListVM.swift */; };
 		F098929A28E5BDB3003D7C16 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929928E5BDB3003D7C16 /* ListVC.swift */; };
@@ -60,6 +62,7 @@
 		F094E7AF28E5E0490082CDCC /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		F094E7B028E5E0490082CDCC /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		F094E7B428E5E4E80082CDCC /* homeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeEntity.swift; sourceTree = "<group>"; };
+		F096D3D728EB6996003CAC57 /* FlightEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightEntity.swift; sourceTree = "<group>"; };
 		F098926928E5AB3D003D7C16 /* homeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVM.swift; sourceTree = "<group>"; };
 		F098926B28E5AB63003D7C16 /* homeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeModel.swift; sourceTree = "<group>"; };
 		F098927128E5AB9C003D7C16 /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
@@ -72,7 +75,7 @@
 		F098928C28E5BD6D003D7C16 /* DetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
 		F098928E28E5BD77003D7C16 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		F098929128E5BD84003D7C16 /* DetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntity.swift; sourceTree = "<group>"; };
-		F098929328E5BD96003D7C16 /* ListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntity.swift; sourceTree = "<group>"; };
+		F098929328E5BD96003D7C16 /* HotelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelEntity.swift; sourceTree = "<group>"; };
 		F098929528E5BDA0003D7C16 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		F098929728E5BDA8003D7C16 /* ListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVM.swift; sourceTree = "<group>"; };
 		F098929928E5BDB3003D7C16 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0FB3CA428E95DB200130912 /* Kingfisher in Frameworks */,
+				F096D3DB28EB6AE7003CAC57 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +285,8 @@
 		F098928528E5B922003D7C16 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				F098929328E5BD96003D7C16 /* ListEntity.swift */,
+				F098929328E5BD96003D7C16 /* HotelEntity.swift */,
+				F096D3D728EB6996003CAC57 /* FlightEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 			name = "Travel App";
 			packageProductDependencies = (
 				F0FB3CA328E95DB200130912 /* Kingfisher */,
+				F096D3DA28EB6AE7003CAC57 /* Alamofire */,
 			);
 			productName = "Travel App";
 			productReference = F01AEDC128E3166900D4C730 /* Travel App.app */;
@@ -388,6 +394,7 @@
 			mainGroup = F01AEDB828E3166900D4C730;
 			packageReferences = (
 				F0FB3CA228E95DB200130912 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				F096D3D928EB6AE7003CAC57 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = F01AEDC228E3166900D4C730 /* Products */;
 			projectDirPath = "";
@@ -440,11 +447,12 @@
 				F0590F5E28E4615E003BF6D3 /* SearchTableViewCell.swift in Sources */,
 				F094E7B528E5E4E80082CDCC /* homeEntity.swift in Sources */,
 				F098929828E5BDA8003D7C16 /* ListVM.swift in Sources */,
-				F098929428E5BD96003D7C16 /* ListEntity.swift in Sources */,
+				F098929428E5BD96003D7C16 /* HotelEntity.swift in Sources */,
 				F098928F28E5BD77003D7C16 /* DetailModel.swift in Sources */,
 				F098927B28E5ABE0003D7C16 /* bookmarksTableViewCell.swift in Sources */,
 				F098928D28E5BD6D003D7C16 /* DetailVM.swift in Sources */,
 				F098929628E5BDA0003D7C16 /* ListModel.swift in Sources */,
+				F096D3D828EB6996003CAC57 /* FlightEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +676,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F096D3D928EB6AE7003CAC57 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		F0FB3CA228E95DB200130912 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -679,6 +695,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F096D3DA28EB6AE7003CAC57 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F096D3D928EB6AE7003CAC57 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		F0FB3CA328E95DB200130912 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F0FB3CA228E95DB200130912 /* XCRemoteSwiftPackageReference "Kingfisher" */;
