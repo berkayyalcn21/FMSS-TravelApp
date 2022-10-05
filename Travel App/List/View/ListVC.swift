@@ -72,9 +72,7 @@ extension ListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModel = viewModel.getModel(at: indexPath.row)
-        if cellModel != nil {
-            self.listActivity.stopAnimating()
-        }
+        self.listActivity.stopAnimating()
         let cell = listTableView.dequeueReusableCell(withIdentifier: listTableViewId, for: indexPath) as! ListTableViewCell
         if whitchButton == "hotel" {
             cell.ListImageView.image = UIImage(named: "bg-7")
