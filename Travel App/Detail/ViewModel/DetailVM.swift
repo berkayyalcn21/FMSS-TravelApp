@@ -20,8 +20,9 @@ class DetailVM {
         model.detailModelDelegate = self
     }
     
-    func didViewLoad() {
-        
+    // Transfer to Model
+    func sendDataPost(bookmarkImageView: Data, bookmarkTitle: String, bookmarkDesc: String) {
+        model.post(bookmarkImageView: bookmarkImageView, bookmarkTitle: bookmarkTitle, bookmarkDesc: bookmarkDesc)
     }
 }
 
