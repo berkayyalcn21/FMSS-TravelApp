@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+class BookmarksVM {
+    
+    let bookmarksModel = BookmarksModel()
+    
+    func didViewLoad() -> [BookmarksEntity] {
+        let bookmarks = bookmarksModel.get()
+        return bookmarks
+    }
+}

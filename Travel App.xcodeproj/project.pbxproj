@@ -41,6 +41,8 @@
 		F098929628E5BDA0003D7C16 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929528E5BDA0003D7C16 /* ListModel.swift */; };
 		F098929828E5BDA8003D7C16 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929728E5BDA8003D7C16 /* ListVM.swift */; };
 		F098929A28E5BDB3003D7C16 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929928E5BDB3003D7C16 /* ListVC.swift */; };
+		F0BC868F28EDA69B009FB9BD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC868E28EDA69B009FB9BD /* CoreDataStack.swift */; };
+		F0BC869228EDA7C0009FB9BD /* Bookmarks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0BC869028EDA7C0009FB9BD /* Bookmarks.xcdatamodeld */; };
 		F0FB3C9F28E8ABF000130912 /* ArticlesData.json in Resources */ = {isa = PBXBuildFile; fileRef = F0FB3C9E28E8ABF000130912 /* ArticlesData.json */; };
 		F0FB3CA428E95DB200130912 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F0FB3CA328E95DB200130912 /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,8 @@
 		F098929528E5BDA0003D7C16 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		F098929728E5BDA8003D7C16 /* ListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVM.swift; sourceTree = "<group>"; };
 		F098929928E5BDB3003D7C16 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		F0BC868E28EDA69B009FB9BD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F0BC869128EDA7C0009FB9BD /* Bookmarks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookmarks.xcdatamodel; sourceTree = "<group>"; };
 		F0FB3C9E28E8ABF000130912 /* ArticlesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ArticlesData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -243,6 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				F098927F28E5AC13003D7C16 /* BookmarksModel.swift */,
+				F0BC868E28EDA69B009FB9BD /* CoreDataStack.swift */,
+				F0BC869028EDA7C0009FB9BD /* Bookmarks.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				F01AEDDA28E3454700D4C730 /* topPickArtickesCell.swift in Sources */,
 				F0590F3928E435BD003BF6D3 /* SearchVC.swift in Sources */,
 				F094E7B128E5E0490082CDCC /* ListTableViewCell.swift in Sources */,
+				F0BC868F28EDA69B009FB9BD /* CoreDataStack.swift in Sources */,
 				F01AEDC928E3166900D4C730 /* HomeVC.swift in Sources */,
 				F098928028E5AC13003D7C16 /* BookmarksModel.swift in Sources */,
 				F098926C28E5AB63003D7C16 /* homeModel.swift in Sources */,
@@ -457,6 +464,7 @@
 				F098928D28E5BD6D003D7C16 /* DetailVM.swift in Sources */,
 				F098929628E5BDA0003D7C16 /* ListModel.swift in Sources */,
 				F096D3D828EB6996003CAC57 /* FlightEntity.swift in Sources */,
+				F0BC869228EDA7C0009FB9BD /* Bookmarks.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +718,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		F0BC869028EDA7C0009FB9BD /* Bookmarks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F0BC869128EDA7C0009FB9BD /* Bookmarks.xcdatamodel */,
+			);
+			currentVersion = F0BC869128EDA7C0009FB9BD /* Bookmarks.xcdatamodel */;
+			path = Bookmarks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F01AEDB928E3166900D4C730 /* Project object */;
 }

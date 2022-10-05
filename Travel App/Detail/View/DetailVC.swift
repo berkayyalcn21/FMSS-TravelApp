@@ -10,12 +10,14 @@ import UIKit
 class DetailVC: UIViewController {
 
     let descText: String = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UITextView!
     var data: AnyObject?
     var dataType: DataType?
+    var detailViewModel = DetailVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,7 @@ class DetailVC: UIViewController {
         case article
         case flight
         case hotel
+        case bookmark
     }
     
     func setupUI() {
@@ -60,6 +63,13 @@ class DetailVC: UIViewController {
                 titleLabel.text = data.listTitle
                 descLabel.text = descText
             }
+        case .bookmark:
+            if let data = data as? BookmarksEntity {
+                imageView.image = UIImage(data: data.bookmarkImageView!)
+                categoryLabel.text = "Travel"
+                titleLabel.text = data.bookmarkTitle
+                descLabel.text = data.bookmarkDesc
+            }
         case .none: break
         }
     }
@@ -70,7 +80,8 @@ class DetailVC: UIViewController {
     
     
     @IBAction func addBookmarkButtonTapped(_ sender: Any) {
-        
+        let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+        detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
     }
     
 }
