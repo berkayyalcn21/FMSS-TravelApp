@@ -24,6 +24,11 @@ class DetailVM {
     func sendDataPost(bookmarkImageView: Data, bookmarkTitle: String, bookmarkDesc: String) {
         model.post(bookmarkImageView: bookmarkImageView, bookmarkTitle: bookmarkTitle, bookmarkDesc: bookmarkDesc)
     }
+    
+    // Transfer data to model
+    func sendDataDelete(name: String) {
+        model.delete(name: name)
+    }
 }
 
 extension DetailVM: DetailModelToDetailVMProtocol {

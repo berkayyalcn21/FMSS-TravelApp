@@ -276,6 +276,7 @@
                     <connections>
                         <outlet property="categoryLabel" destination="WH5-iq-8MC" id="LnS-m4-RdG"/>
                         <outlet property="descLabel" destination="7at-tw-sNW" id="CTN-VP-gzH"/>
+                        <outlet property="detailButton" destination="UwU-iR-p1t" id="pVj-J7-qFb"/>
                         <outlet property="imageView" destination="hvq-l5-giE" id="TEw-YM-Wd8"/>
                         <outlet property="titleLabel" destination="X93-xs-msa" id="lZ4-Uq-dFd"/>
                     </connections>

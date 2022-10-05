@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 protocol DetailModelToDetailVMProtocol: AnyObject {
     func sendData(isComplete: Bool)
@@ -15,9 +16,10 @@ class DetailModel {
     
     static var sharedDetail = DetailModel()
     weak var detailModelDelegate: DetailModelToDetailVMProtocol?
+    let bookmarksVM = BookmarksVM()
     
     func getArticle() {
-        
+        //TODO:
     }
     
     // Save to database(CoreData)
@@ -32,6 +34,20 @@ class DetailModel {
         data.setValue(bookmarkDesc, forKey: #keyPath(BookmarksEntity.bookmarkDesc))
         data.setValue(Date(), forKey: #keyPath(BookmarksEntity.bookmarkSorter))
 
+        AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
+    }
+    
+    // Delete from database(CoreData)
+    func delete(name: String) {
+        let context = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
+        let request: NSFetchRequest<BookmarksEntity> = BookmarksEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "bookmarkTitle CONTAINS[cd] %@", name)
+        do {
+            let itemArray = try context.fetch(request)
+            context.delete(itemArray.first!)
+        } catch {
+            print("Error fetching data from context, \(error)")
+        }
         AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
     }
 

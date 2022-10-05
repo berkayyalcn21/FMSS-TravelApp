@@ -14,15 +14,26 @@ class DetailVC: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailButton: UIButton!
     @IBOutlet weak var descLabel: UITextView!
     var data: AnyObject?
     var dataType: DataType?
     var detailViewModel = DetailVM()
+    let bookmarksVM = BookmarksVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        for i in bookmarksVM.didViewLoad() {
+            print(i)
+            if i.bookmarkTitle == titleLabel.text {
+                detailButton.titleLabel?.text = "Remove Bookmark"
+            }
+        }
     }
     
     enum DataType {
@@ -80,8 +91,21 @@ class DetailVC: UIViewController {
     
     
     @IBAction func addBookmarkButtonTapped(_ sender: Any) {
-        let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
-        detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
+        if bookmarksVM.didViewLoad().isEmpty {
+            let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+            detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
+        }else {
+            for i in bookmarksVM.didViewLoad() {
+                if i.bookmarkTitle == titleLabel.text {
+                    detailButton.titleLabel?.text = "Remove Bookmark"
+                    detailViewModel.sendDataDelete(name: titleLabel.text!)
+                    break
+                }else {
+                    let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+                    detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
+                    break
+                }
+            }
+        }
     }
-    
 }
