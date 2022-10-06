@@ -36,6 +36,10 @@ class HomeVM {
         let article = model.articlesList[index]
         return article
     }
+    
+    func getModelList() -> [Article] {
+        model.articlesList
+    }
 
 }
 

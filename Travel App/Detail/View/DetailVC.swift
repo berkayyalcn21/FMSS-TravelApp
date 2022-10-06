@@ -88,7 +88,6 @@ class DetailVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    
     @IBAction func addBookmarkButtonTapped(_ sender: Any) {
         for i in bookmarksVM.didViewLoad() {
             if i.bookmarkTitle == titleLabel.text {
