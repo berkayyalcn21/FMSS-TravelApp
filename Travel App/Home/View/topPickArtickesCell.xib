@@ -35,6 +35,14 @@
                         <color key="textColor" red="0.094117647058823528" green="0.10196078431372549" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icA-OV-D7w">
+                        <rect key="frame" x="192" y="5" width="56" height="46"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="bookmarkSave"/>
+                        <connections>
+                            <action selector="articleSaveButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="HPj-RB-QLG"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -43,6 +51,8 @@
                 <constraint firstItem="bgW-WA-hif" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="97p-PV-8yd"/>
                 <constraint firstItem="rKq-aD-KwO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="B9n-W7-zjW"/>
                 <constraint firstItem="YfD-i8-mi2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="Cbp-o4-vPM"/>
+                <constraint firstAttribute="trailing" secondItem="icA-OV-D7w" secondAttribute="trailing" constant="5" id="aQV-b5-uBx"/>
+                <constraint firstItem="icA-OV-D7w" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ax3-CN-0mS"/>
                 <constraint firstItem="YfD-i8-mi2" firstAttribute="top" secondItem="bgW-WA-hif" secondAttribute="bottom" constant="8" id="cJ2-hb-Y1u"/>
                 <constraint firstAttribute="trailing" secondItem="rKq-aD-KwO" secondAttribute="trailing" constant="10" id="gyu-29-mJQ"/>
                 <constraint firstItem="rKq-aD-KwO" firstAttribute="top" secondItem="YfD-i8-mi2" secondAttribute="bottom" constant="8" id="hZA-Xx-GFY"/>
@@ -53,6 +63,7 @@
                 <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="6"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="articleButton" destination="icA-OV-D7w" id="35M-Vs-AhL"/>
                 <outlet property="categoryLabel" destination="YfD-i8-mi2" id="cWE-4f-MQ1"/>
                 <outlet property="imageView" destination="bgW-WA-hif" id="sBU-p2-Cqk"/>
                 <outlet property="titleLabel" destination="rKq-aD-KwO" id="6aj-ut-tPc"/>
@@ -61,6 +72,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="bookmarkSave" width="32" height="32"/>
         <image name="photo" catalog="system" width="128" height="93"/>
     </resources>
 </document>

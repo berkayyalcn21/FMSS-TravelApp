@@ -13,6 +13,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var topArticlesCollectionView: UICollectionView!
     private let topAriclesCollection = "topPickArtickesCell"
     private let homeVM = HomeVM()
+    let bookmarksVM = BookmarksVM()
+    var detailViewModel = DetailVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,10 @@ class HomeVC: UIViewController {
         homeVM.didViewLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        topArticlesCollectionView.reloadData()
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
@@ -29,6 +35,7 @@ class HomeVC: UIViewController {
     func setupUI() {
         topArticlesCollectionView.delegate = self
         topArticlesCollectionView.dataSource = self
+        
         register()
     }
     
@@ -62,7 +69,7 @@ extension HomeVC: UICollectionViewDelegate {
     }
 }
 
-extension HomeVC: UICollectionViewDataSource {
+extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return homeVM.numberOfItems()
@@ -78,7 +85,51 @@ extension HomeVC: UICollectionViewDataSource {
         }
         cell.categoryLabel.text = cellModel.category
         cell.titleLabel.text = cellModel.title
+        cell.articleButtonDelegate = self
+        cell.indexPath = indexPath
+        
+        for i in bookmarksVM.didViewLoad() {
+            if i.bookmarkTitle == cellModel.title {
+                cell.articleButton.setImage(UIImage(named: "bookmarkSaveFill"), for: .normal)
+                break
+            }else {
+                cell.articleButton.setImage(UIImage(named: "bookmarkSave"), for: .normal)
+                break
+            }
+        }
         return cell
+    }
+    
+    func articleSaveOrDelete(indexPaht: IndexPath) {
+        let cellArticleModel = homeVM.getModelList()[indexPaht.row]
+        if !bookmarksVM.didViewLoad().isEmpty {
+            for i in bookmarksVM.didViewLoad() {
+                if i.bookmarkTitle == cellArticleModel.title {
+                    detailViewModel.sendDataDelete(name: cellArticleModel.title!)
+                    break
+                }else {
+                    if let url = cellArticleModel.images {
+                        let data = try! Data(contentsOf: URL(string: url)!)
+                        guard let image = UIImage(data: data) else { return }
+                        let imageData = image.jpegData(compressionQuality: 0.5)
+                        detailViewModel.sendDataPost(bookmarkImageView: imageData!,
+                                                     bookmarkTitle: cellArticleModel.title!,
+                                                     bookmarkDesc: cellArticleModel.description!)
+                    }
+                    break
+                }
+            }
+        }else {
+            if let url = cellArticleModel.images {
+                let data = try! Data(contentsOf: URL(string: url)!)
+                guard let image = UIImage(data: data) else { return }
+                let imageData = image.jpegData(compressionQuality: 0.5)
+                detailViewModel.sendDataPost(bookmarkImageView: imageData!,
+                                             bookmarkTitle: cellArticleModel.title!,
+                                             bookmarkDesc: cellArticleModel.description!)
+            }
+        }
+        topArticlesCollectionView.reloadData()
     }
 }
 
@@ -96,7 +147,6 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         return 30
     }
 }
-
 
 extension HomeVC: HomeVMToHomeVCProtocol {
     

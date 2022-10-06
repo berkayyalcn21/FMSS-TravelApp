@@ -88,19 +88,24 @@ class DetailVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    
     @IBAction func addBookmarkButtonTapped(_ sender: Any) {
-        for i in bookmarksVM.didViewLoad() {
-            if i.bookmarkTitle == titleLabel.text {
-                detailViewModel.sendDataDelete(name: titleLabel.text!)
-                changeButtonTitle(change: true)
-                break
-            }else if bookmarksVM.didViewLoad().isEmpty || i.bookmarkTitle != titleLabel.text {
-                let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
-                detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
-                changeButtonTitle(change: false)
-                break
+        if !bookmarksVM.didViewLoad().isEmpty {
+            for i in bookmarksVM.didViewLoad() {
+                if i.bookmarkTitle == titleLabel.text {
+                    detailViewModel.sendDataDelete(name: titleLabel.text!)
+                    changeButtonTitle(change: true)
+                    break
+                }else {
+                    let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+                    detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
+                    changeButtonTitle(change: false)
+                    break
+                }
             }
+        }else {
+            let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+            detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
+            changeButtonTitle(change: false)
         }
     }
     
