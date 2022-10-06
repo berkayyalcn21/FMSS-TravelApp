@@ -87,14 +87,10 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
         cell.titleLabel.text = cellModel.title
         cell.articleButtonDelegate = self
         cell.indexPath = indexPath
-        
+        cell.articleButton.setImage(UIImage(named: "bookmarkSave"), for: .normal)
         for i in bookmarksVM.didViewLoad() {
             if i.bookmarkTitle == cellModel.title {
                 cell.articleButton.setImage(UIImage(named: "bookmarkSaveFill"), for: .normal)
-                break
-            }else {
-                cell.articleButton.setImage(UIImage(named: "bookmarkSave"), for: .normal)
-                break
             }
         }
         return cell
@@ -112,7 +108,7 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
                         let data = try! Data(contentsOf: URL(string: url)!)
                         guard let image = UIImage(data: data) else { return }
                         let imageData = image.jpegData(compressionQuality: 0.5)
-                        detailViewModel.sendDataPost(bookmarkImageView: imageData!,
+                        self.detailViewModel.sendDataPost(bookmarkImageView: imageData!,
                                                      bookmarkTitle: cellArticleModel.title!,
                                                      bookmarkDesc: cellArticleModel.description!)
                     }
