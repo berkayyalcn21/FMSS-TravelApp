@@ -36,6 +36,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel" translatesAutoresizingMaskIntoConstraints="NO" id="oZ1-U0-Xnq">
+                                <rect key="frame" x="12" y="18" width="49" height="20"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -48,6 +51,8 @@
                             <constraint firstAttribute="trailing" secondItem="vbO-Gh-5WO" secondAttribute="trailing" constant="117" id="UK7-2y-frr"/>
                             <constraint firstAttribute="bottom" secondItem="rBI-ia-KlT" secondAttribute="bottom" constant="8" id="dhx-uC-VDs"/>
                             <constraint firstAttribute="trailing" secondItem="rBI-ia-KlT" secondAttribute="trailing" constant="117" id="hAS-hu-E0f"/>
+                            <constraint firstItem="oZ1-U0-Xnq" firstAttribute="leading" secondItem="uru-lp-p0R" secondAttribute="leading" constant="12" id="hyc-je-diS"/>
+                            <constraint firstItem="oZ1-U0-Xnq" firstAttribute="top" secondItem="uru-lp-p0R" secondAttribute="top" constant="18" id="qkQ-KW-NvN"/>
                             <constraint firstItem="Vnl-69-8sa" firstAttribute="top" secondItem="uru-lp-p0R" secondAttribute="top" id="sHV-VR-nJd"/>
                             <constraint firstItem="vbO-Gh-5WO" firstAttribute="top" secondItem="uru-lp-p0R" secondAttribute="top" constant="107" id="tLJ-kx-YjG"/>
                         </constraints>
@@ -65,12 +70,14 @@
                 <outlet property="searchDescLabel" destination="rBI-ia-KlT" id="l0N-5Q-tMa"/>
                 <outlet property="searchImageView" destination="Vnl-69-8sa" id="avJ-v5-TXy"/>
                 <outlet property="searchTitleLabel" destination="vbO-Gh-5WO" id="7O2-cv-fbH"/>
+                <outlet property="typeImageView" destination="oZ1-U0-Xnq" id="ml5-qG-ynV"/>
             </connections>
             <point key="canvasLocation" x="160" y="15.995260663507109"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="bg-7" width="1920" height="1080"/>
+        <image name="hotel" width="49" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

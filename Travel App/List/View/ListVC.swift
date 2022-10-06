@@ -31,10 +31,8 @@ class ListVC: UIViewController {
         viewModel.listVMDelegate = self
         if whitchButton == "hotel" {
             viewModel.hotelOrFlight = .hotel
-            print("otel")
         }else {
             viewModel.hotelOrFlight = .flight
-            print("uçak")
         }
         viewModel.didViewLoad()
     }

@@ -148,8 +148,10 @@ extension SearchVC: UITableViewDataSource {
         let cell = searchTableView.dequeueReusableCell(withIdentifier: searchTableViewRegister, for: indexPath) as! SearchTableViewCell
         if whitchButton == .hotel {
             cell.searchImageView.image = UIImage(named: "bg-7")
+            cell.typeImageView.image = UIImage(named: "hotel")
         }else {
             cell.searchImageView.image = UIImage(named: "bg-8")
+            cell.typeImageView.image = UIImage(named: "flight")
         }
         cell.searchTitleLabel.text = cellModel.listTitle
         cell.searchDescLabel.text = cellModel.listDesc
