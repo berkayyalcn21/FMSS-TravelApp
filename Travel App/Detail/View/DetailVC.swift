@@ -29,7 +29,6 @@ class DetailVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         for i in bookmarksVM.didViewLoad() {
-            print(i)
             if i.bookmarkTitle == titleLabel.text {
                 detailButton.titleLabel?.text = "Remove Bookmark"
             }
@@ -63,14 +62,14 @@ class DetailVC: UIViewController {
         case .flight:
             if let data = data as? ListEntity {
                 imageView.image = UIImage(named: "bg-8-1")
-                categoryLabel.text = "Travel"
+                categoryLabel.text = "Flight Travel"
                 titleLabel.text = data.listTitle
                 descLabel.text = descText
             }
         case .hotel:
             if let data = data as? ListEntity {
                 imageView.image = UIImage(named: "bg-6")
-                categoryLabel.text = "Travel"
+                categoryLabel.text = "Hotel Travel"
                 titleLabel.text = data.listTitle
                 descLabel.text = descText
             }
@@ -91,21 +90,25 @@ class DetailVC: UIViewController {
     
     
     @IBAction func addBookmarkButtonTapped(_ sender: Any) {
-        if bookmarksVM.didViewLoad().isEmpty {
-            let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
-            detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
-        }else {
-            for i in bookmarksVM.didViewLoad() {
-                if i.bookmarkTitle == titleLabel.text {
-                    detailButton.titleLabel?.text = "Remove Bookmark"
-                    detailViewModel.sendDataDelete(name: titleLabel.text!)
-                    break
-                }else {
-                    let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
-                    detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
-                    break
-                }
+        for i in bookmarksVM.didViewLoad() {
+            if i.bookmarkTitle == titleLabel.text {
+                detailViewModel.sendDataDelete(name: titleLabel.text!)
+                changeButtonTitle(change: true)
+                break
+            }else if bookmarksVM.didViewLoad().isEmpty || i.bookmarkTitle != titleLabel.text {
+                let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+                detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
+                changeButtonTitle(change: false)
+                break
             }
+        }
+    }
+    
+    func changeButtonTitle(change: Bool) {
+        if change {
+            detailButton.setTitle("Add Bookmark", for: .normal)
+        }else {
+            detailButton.setTitle("Remove Bookmark", for: .normal)
         }
     }
 }
