@@ -24,6 +24,10 @@ class HomeVC: UIViewController {
         homeVM.didViewLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        topArticlesCollectionView.reloadData()
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
