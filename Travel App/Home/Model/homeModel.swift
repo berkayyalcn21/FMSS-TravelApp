@@ -32,4 +32,11 @@ class HomeModel {
             delegate?.sendData(isSuccess: false)
         }
     }
+    
+    func testApi() {
+        
+        
+        
+        
+    }
 }

@@ -98,25 +98,34 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
     
     func articleSaveOrDelete(indexPaht: IndexPath) {
         let cellArticleModel = homeVM.getModelList()[indexPaht.row]
-        for i in bookmarksVM.didViewLoad() {
-            if i.bookmarkTitle == cellArticleModel.title {
-                detailViewModel.sendDataDelete(name: cellArticleModel.title!)
-                print("Silindi")
-                break
-            }else {
-                if let url = cellArticleModel.images {
-                    let data = try! Data(contentsOf: URL(string: url)!)
-                    guard let image = UIImage(data: data) else { return }
-                    let imageData = image.jpegData(compressionQuality: 0.5)
-                    detailViewModel.sendDataPost(bookmarkImageView: imageData!,
-                                                 bookmarkTitle: cellArticleModel.title!,
-                                                 bookmarkDesc: cellArticleModel.description!)
-                    print("Kaydet")
+        if !bookmarksVM.didViewLoad().isEmpty {
+            for i in bookmarksVM.didViewLoad() {
+                if i.bookmarkTitle == cellArticleModel.title {
+                    detailViewModel.sendDataDelete(name: cellArticleModel.title!)
+                    break
+                }else {
+                    if let url = cellArticleModel.images {
+                        let data = try! Data(contentsOf: URL(string: url)!)
+                        guard let image = UIImage(data: data) else { return }
+                        let imageData = image.jpegData(compressionQuality: 0.5)
+                        detailViewModel.sendDataPost(bookmarkImageView: imageData!,
+                                                     bookmarkTitle: cellArticleModel.title!,
+                                                     bookmarkDesc: cellArticleModel.description!)
+                    }
+                    break
                 }
-                topArticlesCollectionView.reloadData()
-                break
+            }
+        }else {
+            if let url = cellArticleModel.images {
+                let data = try! Data(contentsOf: URL(string: url)!)
+                guard let image = UIImage(data: data) else { return }
+                let imageData = image.jpegData(compressionQuality: 0.5)
+                detailViewModel.sendDataPost(bookmarkImageView: imageData!,
+                                             bookmarkTitle: cellArticleModel.title!,
+                                             bookmarkDesc: cellArticleModel.description!)
             }
         }
+        topArticlesCollectionView.reloadData()
     }
 }
 
