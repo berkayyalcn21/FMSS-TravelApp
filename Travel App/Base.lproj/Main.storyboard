@@ -129,6 +129,8 @@
                     <tabBarItem key="tabBarItem" title="" image="homeButton" selectedImage="homeButtonFill" id="Q2k-Ov-zTZ"/>
                     <navigationItem key="navigationItem" id="POi-YB-Sg1"/>
                     <connections>
+                        <outlet property="flightView" destination="DyF-WP-2TR" id="qrY-HJ-aqP"/>
+                        <outlet property="hotelView" destination="aj8-Rt-NZs" id="ahW-ht-fDb"/>
                         <outlet property="topArticlesCollectionView" destination="xDA-rP-yYi" id="4Lm-Lz-y7u"/>
                     </connections>
                 </viewController>
