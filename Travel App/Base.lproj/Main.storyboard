@@ -338,10 +338,10 @@
             </objects>
             <point key="canvasLocation" x="29" y="-34"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab BarVC-->
         <scene sceneID="lv0-oi-giV">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BfT-S8-vRP" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="BfT-S8-vRP" customClass="TabBarVC" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="f1h-OV-QfG"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fqX-d8-tLa">

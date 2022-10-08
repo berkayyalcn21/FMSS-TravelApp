@@ -17,8 +17,8 @@ class WelcomeVC: UIViewController {
         // First screen gif settings
         let gif = UIImage.gifImageWithName("fly")
         imageView.image = gif
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            let story = self.storyboard?.instantiateViewController(identifier: "HomeVC") as! HomeVC
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            let story = self.storyboard?.instantiateViewController(identifier: "TabBarVC") as! TabBarVC
             self.navigationController?.pushViewController(story, animated: false)
         }
     }
