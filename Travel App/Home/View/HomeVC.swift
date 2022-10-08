@@ -118,7 +118,6 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
                     break
                 }else {
                     self.articleSaveOrDelete(check: true, indexPaht: indexPaht)
-                    print("sildi")
                     break
                 }
             }

@@ -60,7 +60,7 @@ extension BookmarksVC: UITableViewDataSource {
         cell.bookmarksTitleLabel.text = bookmarks.bookmarkTitle
         cell.bookmarksDescLabel.text = bookmarks.bookmarkDesc
         cell.backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1.00)
-//        cell.selectionStyle = .none
+        cell.selectionStyle = .none
         return cell
     }
     

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "carbon_arrow-left.png",
+      "filename" : "carbon_arrow-left 2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "carbon_arrow-left@2x.png",
+      "filename" : "carbon_arrow-left@2x 2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "carbon_arrow-left@3x.png",
+      "filename" : "carbon_arrow-left@3x 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

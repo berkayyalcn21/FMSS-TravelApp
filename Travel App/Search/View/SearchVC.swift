@@ -156,6 +156,7 @@ extension SearchVC: UITableViewDataSource {
         cell.searchTitleLabel.text = cellModel.listTitle
         cell.searchDescLabel.text = cellModel.listDesc
         cell.backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1.00)
+        cell.selectionStyle = .none
         return cell
     }
     

@@ -80,6 +80,7 @@ extension ListVC: UITableViewDataSource {
         cell.ListTitleLabel.text = cellModel.listTitle
         cell.ListDescLabel.text = cellModel.listDesc
         cell.layer.cornerRadius = 20
+        cell.selectionStyle = .none
         return cell
     }
     
