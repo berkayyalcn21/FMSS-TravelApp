@@ -2,7 +2,7 @@
 
 ### 223. FMSS Bilişim iOS Swift Bootcamp - Travel App
 
-![Simulator](https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/appIcon.png)
+![Simulator](https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/phoneIcon.png)
 
 
 #### Description
@@ -17,17 +17,17 @@ You can search for flights or hotels from the search page.
 
 #### Screens
 
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/welcome.png" width="200" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/firstPage.png" width="200" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home.png" width="200" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/homeColor.png" width="200" /> 
+<img src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/splashScreen.png" width="200" /> <img 
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/homePage.png" width="200" /> <img 
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/flightLoding.png" width="200" /> <img 
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/flightList.png" width="200" /> 
 
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/home-2.png" width="200" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/todos.png" width="200" /> <img
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/deleteTodo.png" width="200" /> <img
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/addTodo.png" width="200" /> 
+<img src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/hotelList.png" width="200" /> <img 
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/searchPage.png" width="200" /> <img
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/searchPageHotel.png" width="200" /> <img
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/searchPageFlight.png" width="200" /> 
 
-<img src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/detailsTodo.png" width="200" /> <img 
+<img src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/searchPageNoData.png" width="200" /> <img 
 src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/gallery-1.png" width="200" /> <img 
 src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/gallery-3.png" width="200" /> <img 
 src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/gallery-2.png" width="200" />
