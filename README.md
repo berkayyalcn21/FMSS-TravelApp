@@ -28,9 +28,9 @@ src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/searchPage
 src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/searchPageFlight.png" width="200" /> 
 
 <img src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/searchPageNoData.png" width="200" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/gallery-1.png" width="200" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/gallery-3.png" width="200" /> <img 
-src="https://github.com/FMSS-IOS-Patika-Bootcamp/homework-3-berkayyalcn21/blob/main/images/gallery-2.png" width="200" />
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/bookmarksPage.png" width="200" /> <img 
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/detailPage.png" width="200" /> <img 
+src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/detailPage-2.png" width="200" />
 
 ## Tools
 
