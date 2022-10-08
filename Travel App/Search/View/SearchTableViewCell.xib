@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="Mjp-h6-T7K" customClass="SearchTableViewCell" customModule="Travel_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mjp-h6-T7K" id="yVP-XC-7NR">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uru-lp-p0R">
+                        <rect key="frame" x="16" y="16" width="326" height="170"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-7" translatesAutoresizingMaskIntoConstraints="NO" id="Vnl-69-8sa">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="170"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBI-ia-KlT">
+                                <rect key="frame" x="8" y="144" width="201" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbO-Gh-5WO">
+                                <rect key="frame" x="8" y="107" width="201" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel" translatesAutoresizingMaskIntoConstraints="NO" id="oZ1-U0-Xnq">
+                                <rect key="frame" x="12" y="18" width="49" height="20"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rBI-ia-KlT" firstAttribute="leading" secondItem="uru-lp-p0R" secondAttribute="leading" constant="8" id="3bk-ZN-5CN"/>
+                            <constraint firstItem="vbO-Gh-5WO" firstAttribute="leading" secondItem="uru-lp-p0R" secondAttribute="leading" constant="8" id="7DQ-Zy-XOp"/>
+                            <constraint firstAttribute="trailing" secondItem="Vnl-69-8sa" secondAttribute="trailing" id="Ck0-gc-L6u"/>
+                            <constraint firstItem="Vnl-69-8sa" firstAttribute="leading" secondItem="uru-lp-p0R" secondAttribute="leading" id="EkM-NK-tE9"/>
+                            <constraint firstItem="rBI-ia-KlT" firstAttribute="top" secondItem="vbO-Gh-5WO" secondAttribute="bottom" constant="13" id="Le4-jJ-f8X"/>
+                            <constraint firstAttribute="bottom" secondItem="Vnl-69-8sa" secondAttribute="bottom" id="U0y-Sx-jjo"/>
+                            <constraint firstAttribute="trailing" secondItem="vbO-Gh-5WO" secondAttribute="trailing" constant="117" id="UK7-2y-frr"/>
+                            <constraint firstAttribute="bottom" secondItem="rBI-ia-KlT" secondAttribute="bottom" constant="8" id="dhx-uC-VDs"/>
+                            <constraint firstAttribute="trailing" secondItem="rBI-ia-KlT" secondAttribute="trailing" constant="117" id="hAS-hu-E0f"/>
+                            <constraint firstItem="oZ1-U0-Xnq" firstAttribute="leading" secondItem="uru-lp-p0R" secondAttribute="leading" constant="12" id="hyc-je-diS"/>
+                            <constraint firstItem="oZ1-U0-Xnq" firstAttribute="top" secondItem="uru-lp-p0R" secondAttribute="top" constant="18" id="qkQ-KW-NvN"/>
+                            <constraint firstItem="Vnl-69-8sa" firstAttribute="top" secondItem="uru-lp-p0R" secondAttribute="top" id="sHV-VR-nJd"/>
+                            <constraint firstItem="vbO-Gh-5WO" firstAttribute="top" secondItem="uru-lp-p0R" secondAttribute="top" constant="107" id="tLJ-kx-YjG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uru-lp-p0R" firstAttribute="leading" secondItem="yVP-XC-7NR" secondAttribute="leading" constant="16" id="5Q2-R4-L5e"/>
+                    <constraint firstItem="uru-lp-p0R" firstAttribute="top" secondItem="yVP-XC-7NR" secondAttribute="top" constant="16" id="9Cy-9f-HHc"/>
+                    <constraint firstAttribute="bottom" secondItem="uru-lp-p0R" secondAttribute="bottom" constant="14" id="hnB-0t-Rdd"/>
+                    <constraint firstAttribute="trailing" secondItem="uru-lp-p0R" secondAttribute="trailing" constant="16" id="lxK-9V-gPj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="k0W-Jg-YCm"/>
+            <connections>
+                <outlet property="bgView" destination="uru-lp-p0R" id="Upg-sq-eff"/>
+                <outlet property="searchDescLabel" destination="rBI-ia-KlT" id="l0N-5Q-tMa"/>
+                <outlet property="searchImageView" destination="Vnl-69-8sa" id="avJ-v5-TXy"/>
+                <outlet property="searchTitleLabel" destination="vbO-Gh-5WO" id="7O2-cv-fbH"/>
+                <outlet property="typeImageView" destination="oZ1-U0-Xnq" id="ml5-qG-ynV"/>
+            </connections>
+            <point key="canvasLocation" x="160" y="15.995260663507109"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bg-7" width="1920" height="1080"/>
+        <image name="hotel" width="49" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
