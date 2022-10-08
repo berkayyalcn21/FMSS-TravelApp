@@ -43,6 +43,9 @@
 		F098929A28E5BDB3003D7C16 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F098929928E5BDB3003D7C16 /* ListVC.swift */; };
 		F0BC868F28EDA69B009FB9BD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC868E28EDA69B009FB9BD /* CoreDataStack.swift */; };
 		F0BC869228EDA7C0009FB9BD /* Bookmarks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0BC869028EDA7C0009FB9BD /* Bookmarks.xcdatamodeld */; };
+		F0F8C27F28F1A43700C86F0A /* gifLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8C27E28F1A43700C86F0A /* gifLoader.swift */; };
+		F0F8C28128F1A4BE00C86F0A /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8C28028F1A4BE00C86F0A /* WelcomeVC.swift */; };
+		F0F8C28328F1A5CE00C86F0A /* fly.gif in Resources */ = {isa = PBXBuildFile; fileRef = F0F8C28228F1A5CE00C86F0A /* fly.gif */; };
 		F0FB3C9F28E8ABF000130912 /* ArticlesData.json in Resources */ = {isa = PBXBuildFile; fileRef = F0FB3C9E28E8ABF000130912 /* ArticlesData.json */; };
 		F0FB3CA428E95DB200130912 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F0FB3CA328E95DB200130912 /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -85,6 +88,9 @@
 		F098929928E5BDB3003D7C16 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		F0BC868E28EDA69B009FB9BD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F0BC869128EDA7C0009FB9BD /* Bookmarks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookmarks.xcdatamodel; sourceTree = "<group>"; };
+		F0F8C27E28F1A43700C86F0A /* gifLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gifLoader.swift; sourceTree = "<group>"; };
+		F0F8C28028F1A4BE00C86F0A /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		F0F8C28228F1A5CE00C86F0A /* fly.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fly.gif; sourceTree = "<group>"; };
 		F0FB3C9E28E8ABF000130912 /* ArticlesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ArticlesData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -346,6 +352,9 @@
 		F0FB3C9D28E89FC700130912 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				F0F8C27E28F1A43700C86F0A /* gifLoader.swift */,
+				F0F8C28028F1A4BE00C86F0A /* WelcomeVC.swift */,
+				F0F8C28228F1A5CE00C86F0A /* fly.gif */,
 				F01AEDCD28E3166A00D4C730 /* Assets.xcassets */,
 				F01AEDC428E3166900D4C730 /* AppDelegate.swift */,
 				F01AEDC628E3166900D4C730 /* SceneDelegate.swift */,
@@ -426,6 +435,7 @@
 				F098927C28E5ABE0003D7C16 /* bookmarksTableViewCell.xib in Resources */,
 				F01AEDCC28E3166900D4C730 /* Main.storyboard in Resources */,
 				F0590F5F28E4615E003BF6D3 /* SearchTableViewCell.xib in Resources */,
+				F0F8C28328F1A5CE00C86F0A /* fly.gif in Resources */,
 				F094E7B228E5E0490082CDCC /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +449,7 @@
 			files = (
 				F01AEDDA28E3454700D4C730 /* topPickArtickesCell.swift in Sources */,
 				F0590F3928E435BD003BF6D3 /* SearchVC.swift in Sources */,
+				F0F8C27F28F1A43700C86F0A /* gifLoader.swift in Sources */,
 				F094E7B128E5E0490082CDCC /* ListTableViewCell.swift in Sources */,
 				F0BC868F28EDA69B009FB9BD /* CoreDataStack.swift in Sources */,
 				F01AEDC928E3166900D4C730 /* HomeVC.swift in Sources */,
@@ -457,6 +468,7 @@
 				F01AEDC728E3166900D4C730 /* SceneDelegate.swift in Sources */,
 				F0590F5E28E4615E003BF6D3 /* SearchTableViewCell.swift in Sources */,
 				F094E7B528E5E4E80082CDCC /* homeEntity.swift in Sources */,
+				F0F8C28128F1A4BE00C86F0A /* WelcomeVC.swift in Sources */,
 				F098929828E5BDA8003D7C16 /* ListVM.swift in Sources */,
 				F098929428E5BD96003D7C16 /* HotelEntity.swift in Sources */,
 				F098928F28E5BD77003D7C16 /* DetailModel.swift in Sources */,
