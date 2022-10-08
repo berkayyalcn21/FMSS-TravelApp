@@ -11,13 +11,13 @@ import Kingfisher
 class HomeVC: UIViewController {
 
     @IBOutlet weak var topArticlesCollectionView: UICollectionView!
+    @IBOutlet weak var homeImageView: UIImageView!
+    @IBOutlet weak var flightView: UIView!
+    @IBOutlet weak var hotelView: UIView!
     private let topAriclesCollection = "topPickArtickesCell"
     private let homeVM = HomeVM()
     let bookmarksVM = BookmarksVM()
     var detailViewModel = DetailVM()
-    @IBOutlet weak var homeImageView: UIImageView!
-    @IBOutlet weak var flightView: UIView!
-    @IBOutlet weak var hotelView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,11 +118,12 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
                     break
                 }else {
                     self.articleSaveOrDelete(check: true, indexPaht: indexPaht)
+                    print("sildi")
                     break
                 }
             }
         }else {
-            articleSaveOrDelete(check: false, indexPaht: indexPaht)
+            articleSaveOrDelete(check: true, indexPaht: indexPaht)
         }
     }
     
