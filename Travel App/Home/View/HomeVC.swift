@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     private let homeVM = HomeVM()
     let bookmarksVM = BookmarksVM()
     var detailViewModel = DetailVM()
+    @IBOutlet weak var homeImageView: UIImageView!
     @IBOutlet weak var flightView: UIView!
     @IBOutlet weak var hotelView: UIView!
     
@@ -24,16 +25,6 @@ class HomeVC: UIViewController {
         setupUI()
         homeVM.viewModelDelegate = self
         homeVM.didViewLoad()
-        
-        flightView.layer.shadowColor = UIColor.white.cgColor
-        flightView.layer.shadowOffset = .zero
-        flightView.layer.shadowRadius = 5
-        flightView.layer.shadowOpacity = 0.4
-        
-        hotelView.layer.shadowColor = UIColor.white.cgColor
-        hotelView.layer.shadowOffset = .zero
-        hotelView.layer.shadowRadius = 5
-        hotelView.layer.shadowOpacity = 0.4
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +40,16 @@ class HomeVC: UIViewController {
         topArticlesCollectionView.dataSource = self
         
         register()
+        
+        flightView.layer.shadowColor = UIColor.white.cgColor
+        flightView.layer.shadowOffset = .zero
+        flightView.layer.shadowRadius = 5
+        flightView.layer.shadowOpacity = 0.4
+        
+        hotelView.layer.shadowColor = UIColor.white.cgColor
+        hotelView.layer.shadowOffset = .zero
+        hotelView.layer.shadowRadius = 5
+        hotelView.layer.shadowOpacity = 0.4
     }
     
     func register() {

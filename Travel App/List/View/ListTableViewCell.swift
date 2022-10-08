@@ -19,6 +19,11 @@ class ListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         ListImageView.layer.cornerRadius = 6
+        myView.layer.cornerRadius = 6
+        myView.layer.shadowColor = UIColor.black.cgColor
+        myView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        myView.layer.shadowRadius = 5
+        myView.layer.shadowOpacity = 0.3
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

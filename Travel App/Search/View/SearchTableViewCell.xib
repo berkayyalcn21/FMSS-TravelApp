@@ -67,6 +67,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="k0W-Jg-YCm"/>
             <connections>
+                <outlet property="bgView" destination="uru-lp-p0R" id="Upg-sq-eff"/>
                 <outlet property="searchDescLabel" destination="rBI-ia-KlT" id="l0N-5Q-tMa"/>
                 <outlet property="searchImageView" destination="Vnl-69-8sa" id="avJ-v5-TXy"/>
                 <outlet property="searchTitleLabel" destination="vbO-Gh-5WO" id="7O2-cv-fbH"/>

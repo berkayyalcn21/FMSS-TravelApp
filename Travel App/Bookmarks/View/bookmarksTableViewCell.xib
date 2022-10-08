@@ -62,6 +62,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="e0j-6q-nWV"/>
             <connections>
+                <outlet property="bgView" destination="AzR-Mn-tbv" id="yzH-L7-LLy"/>
                 <outlet property="bookmarksDescLabel" destination="H1m-At-Fb4" id="XmC-xp-m8U"/>
                 <outlet property="bookmarksImageView" destination="NTr-74-MJC" id="5Nj-Te-A1E"/>
                 <outlet property="bookmarksTitleLabel" destination="iyU-DX-Qzz" id="C2b-WA-0LT"/>

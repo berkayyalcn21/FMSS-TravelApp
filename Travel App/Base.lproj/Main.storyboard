@@ -130,6 +130,7 @@
                     <navigationItem key="navigationItem" id="POi-YB-Sg1"/>
                     <connections>
                         <outlet property="flightView" destination="DyF-WP-2TR" id="qrY-HJ-aqP"/>
+                        <outlet property="homeImageView" destination="hlr-rz-zPZ" id="bl0-5s-zYm"/>
                         <outlet property="hotelView" destination="aj8-Rt-NZs" id="ahW-ht-fDb"/>
                         <outlet property="topArticlesCollectionView" destination="xDA-rP-yYi" id="4Lm-Lz-y7u"/>
                     </connections>
@@ -510,7 +511,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F5F-6j-XBb">
                                 <rect key="frame" x="0.0" y="123" width="390" height="638"/>
-                                <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sz3-9M-H6n"/>

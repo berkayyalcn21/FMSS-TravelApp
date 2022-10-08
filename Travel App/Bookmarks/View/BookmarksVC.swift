@@ -38,7 +38,7 @@ class BookmarksVC: UIViewController {
 extension BookmarksVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        bookmarksTableView.deselectRow(at: indexPath, animated: true)
+        bookmarksTableView.deselectRow(at: indexPath, animated: false)
         let cellModel = bookmarksVM.didViewLoad()[indexPath.row]
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
         detailVC.data = cellModel as AnyObject
@@ -59,6 +59,8 @@ extension BookmarksVC: UITableViewDataSource {
         cell.bookmarksImageView.image = UIImage(data: bookmarks.bookmarkImageView!)
         cell.bookmarksTitleLabel.text = bookmarks.bookmarkTitle
         cell.bookmarksDescLabel.text = bookmarks.bookmarkDesc
+        cell.backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1.00)
+//        cell.selectionStyle = .none
         return cell
     }
     

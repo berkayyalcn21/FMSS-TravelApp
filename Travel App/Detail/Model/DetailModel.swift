@@ -44,6 +44,7 @@ class DetailModel {
         request.predicate = NSPredicate(format: "bookmarkTitle CONTAINS[cd] %@", name)
         do {
             let itemArray = try context.fetch(request)
+            print(itemArray.count)
             context.delete(itemArray.first!)
         } catch {
             print("Error fetching data from context, \(error)")
