@@ -22,5 +22,9 @@ class WelcomeVC: UIViewController {
             self.navigationController?.pushViewController(story, animated: false)
         }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 
 }
