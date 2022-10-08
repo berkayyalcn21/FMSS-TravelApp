@@ -19,10 +19,7 @@ class WelcomeVC: UIViewController {
         imageView.image = gif
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             let story = self.storyboard?.instantiateViewController(identifier: "HomeVC") as! HomeVC
-//            story.modalPresentationStyle = .fullScreen
-//            story.modalTransitionStyle = .crossDissolve
             self.navigationController?.pushViewController(story, animated: false)
-//            self.show(story, sender: nil)
         }
     }
 
