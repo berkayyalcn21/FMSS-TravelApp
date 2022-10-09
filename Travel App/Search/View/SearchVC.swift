@@ -29,6 +29,7 @@ class SearchVC: UIViewController {
         searcViewModel.searchButtons = .hotel
         whitchButton = .hotel
         searcViewModel.didViewLoad()
+        self.setupHideKeyboardWhenTapOutside()
     }
     
     func setupUI() {
@@ -39,7 +40,14 @@ class SearchVC: UIViewController {
         flightLine.isHidden = true
         register()
         searchTextField.addTarget(self, action: #selector(searchTextFieldDidChange), for: .editingChanged)
+        // Hide keyboard
+//        let keyboardGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+//        view.addGestureRecognizer(keyboardGestureRecognizer)
     }
+    
+//    @objc func hideKeyboard() {
+//        view.endEditing(true)
+//    }
     
     func register() {
         searchTableView.register(.init(nibName: searchTableViewRegister, bundle: nil), forCellReuseIdentifier: searchTableViewRegister)
@@ -164,3 +172,18 @@ extension SearchVC: UITableViewDataSource {
         return 200
     }
 }
+
+
+extension UIViewController {
+     func setupHideKeyboardWhenTapOutside() {
+         self.view.addGestureRecognizer(self.endEditingRecognizer())
+         self.navigationController?.navigationBar.addGestureRecognizer(self.endEditingRecognizer())
+     }
+ 
+
+     private func endEditingRecognizer() -> UIGestureRecognizer {
+         let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
+         tap.cancelsTouchesInView = false
+         return tap
+     }
+ }
