@@ -16,8 +16,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var hotelView: UIView!
     private let topAriclesCollection = "topPickArtickesCell"
     private let homeVM = HomeVM()
-    let bookmarksVM = BookmarksVM()
-    var detailViewModel = DetailVM()
+    private let bookmarksVM = BookmarksVM()
+    private var detailViewModel = DetailVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,6 +144,7 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.topArticlesCollectionView.reloadData()
+            self.topArticlesCollectionView.reloadItems(at: [indexPaht])
         }
     }
 }
