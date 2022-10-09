@@ -10,10 +10,13 @@ import UIKit
 class WelcomeVC: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    let searcViewModel = SearchVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searcViewModel.searchButtons = .hotel
+        searcViewModel.didViewLoad()
         // First screen gif settings
         let gif = UIImage.gifImageWithName("fly")
         imageView.image = gif

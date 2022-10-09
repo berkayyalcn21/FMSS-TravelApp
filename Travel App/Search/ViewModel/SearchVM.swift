@@ -30,7 +30,6 @@ class SearchVM {
         switch searchButtons {
         case .hotel:
             searchModel.getHotel()
-            
         case .flight:
             searchModel.getFlight()
         case .none:
