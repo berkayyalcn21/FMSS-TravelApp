@@ -15,9 +15,10 @@ class HomeVC: UIViewController {
     @IBOutlet weak var flightView: UIView!
     @IBOutlet weak var hotelView: UIView!
     private let topAriclesCollection = "topPickArtickesCell"
+    private var checkArticleButtonControl: Bool = false
     private let homeVM = HomeVM()
-    let bookmarksVM = BookmarksVM()
-    var detailViewModel = DetailVM()
+    private let bookmarksVM = BookmarksVM()
+    private var detailViewModel = DetailVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,15 +113,18 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
     func articleSaveOrDelete(indexPaht: IndexPath) {
         let cellArticleModel = homeVM.getModelList()[indexPaht.row]
         if !bookmarksVM.didViewLoad().isEmpty {
+            checkArticleButtonControl = true
             for i in bookmarksVM.didViewLoad() {
                 if i.bookmarkTitle == cellArticleModel.title {
                     articleSaveOrDelete(check: false, indexPaht: indexPaht)
-                    break
-                }else {
-                    self.articleSaveOrDelete(check: true, indexPaht: indexPaht)
-                    break
+                    checkArticleButtonControl = false
                 }
             }
+            
+            if checkArticleButtonControl {
+                self.articleSaveOrDelete(check: true, indexPaht: indexPaht)
+            }
+            
         }else {
             articleSaveOrDelete(check: true, indexPaht: indexPaht)
         }
@@ -143,7 +147,7 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.topArticlesCollectionView.reloadData()
+            self.topArticlesCollectionView.reloadItems(at: [indexPaht])
         }
     }
 }

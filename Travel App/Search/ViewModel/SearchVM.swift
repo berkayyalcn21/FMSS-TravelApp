@@ -16,7 +16,6 @@ class SearchVM {
     weak var searchVMDelegate: SearchVMToSearchVCProtocol?
     var searchModel = SearchModel()
     var searchButtons: SearchButtons?
-    var listVM = ListVM()
     
     init() {
         searchModel.searchModelDelegate = self
@@ -31,7 +30,6 @@ class SearchVM {
         switch searchButtons {
         case .hotel:
             searchModel.getHotel()
-            
         case .flight:
             searchModel.getFlight()
         case .none:
