@@ -147,7 +147,7 @@ extension HomeVC: UICollectionViewDataSource, ArticleSaveButtonProtocol {
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.topArticlesCollectionView.reloadData()
+            self.topArticlesCollectionView.reloadItems(at: [indexPaht])
         }
     }
 }
