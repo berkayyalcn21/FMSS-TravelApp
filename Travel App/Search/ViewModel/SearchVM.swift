@@ -16,7 +16,6 @@ class SearchVM {
     weak var searchVMDelegate: SearchVMToSearchVCProtocol?
     var searchModel = SearchModel()
     var searchButtons: SearchButtons?
-    var listVM = ListVM()
     
     init() {
         searchModel.searchModelDelegate = self
