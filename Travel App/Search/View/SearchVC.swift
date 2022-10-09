@@ -40,14 +40,7 @@ class SearchVC: UIViewController {
         flightLine.isHidden = true
         register()
         searchTextField.addTarget(self, action: #selector(searchTextFieldDidChange), for: .editingChanged)
-        // Hide keyboard
-//        let keyboardGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-//        view.addGestureRecognizer(keyboardGestureRecognizer)
     }
-    
-//    @objc func hideKeyboard() {
-//        view.endEditing(true)
-//    }
     
     func register() {
         searchTableView.register(.init(nibName: searchTableViewRegister, bundle: nil), forCellReuseIdentifier: searchTableViewRegister)
