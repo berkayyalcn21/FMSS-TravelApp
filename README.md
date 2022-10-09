@@ -14,6 +14,8 @@ You can search for flights or hotels from the search page.
 - Search Page: You can search for hotels and flights on the search page. You can go to the detail page from the search result.
 - Bookmarks Page: From this page, you can view our favorites and access the detail page.
 - Details Page: You can view the details of the values from the API and add or delete them to favorites.
+- If you get an error when you download the application, you can download the library and refresh its files
+- You can download and run the project
 
 #### Screens
 
@@ -36,11 +38,13 @@ src="https://github.com/berkayyalcn21/FMSS-TravelApp/blob/main/images/detailPage
 
 #### Swift
   - Delegate
+  - Closure
   - POP
   - OOP
   - Date
   - High Order Functions
-  - Memory Menage
+  - Memory Management
+  - Clean Code 
   
 #### UIKit
   - CollectionView
