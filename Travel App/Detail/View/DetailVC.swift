@@ -28,11 +28,7 @@ class DetailVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        for i in bookmarksVM.didViewLoad() {
-            if i.bookmarkTitle == titleLabel.text {
-                detailButton.titleLabel?.text = "Remove Bookmark"
-            }
-        }
+        changeButtonTitle()
     }
     
     enum DataType {
@@ -89,31 +85,31 @@ class DetailVC: UIViewController {
     }
     
     @IBAction func addBookmarkButtonTapped(_ sender: Any) {
+        var checkDetailButtonControl = true
         if !bookmarksVM.didViewLoad().isEmpty {
             for i in bookmarksVM.didViewLoad() {
                 if i.bookmarkTitle == titleLabel.text {
                     detailViewModel.sendDataDelete(name: titleLabel.text!)
-                    changeButtonTitle(change: true)
-                    break
-                }else {
-                    let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
-                    detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
-                    changeButtonTitle(change: false)
-                    break
+                    checkDetailButtonControl = false
                 }
+            }
+            if checkDetailButtonControl {
+                let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
+                detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
             }
         }else {
             let imageData = imageView.image?.jpegData(compressionQuality: 0.5)
             detailViewModel.sendDataPost(bookmarkImageView: imageData!, bookmarkTitle: titleLabel.text!, bookmarkDesc: descLabel.text!)
-            changeButtonTitle(change: false)
         }
+        changeButtonTitle()
     }
     
-    func changeButtonTitle(change: Bool) {
-        if change {
-            detailButton.setTitle("Add Bookmark", for: .normal)
-        }else {
-            detailButton.setTitle("Remove Bookmark", for: .normal)
+    func changeButtonTitle() {
+        detailButton.setTitle("Add Bookmark", for: .normal)
+        for i in bookmarksVM.didViewLoad() {
+            if i.bookmarkTitle == titleLabel.text {
+                detailButton.setTitle("Remove Bookmark", for: .normal)
+            }
         }
     }
 }
