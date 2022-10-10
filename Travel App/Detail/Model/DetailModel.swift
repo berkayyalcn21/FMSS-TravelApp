@@ -17,11 +17,7 @@ class DetailModel {
     static var sharedDetail = DetailModel()
     weak var detailModelDelegate: DetailModelToDetailVMProtocol?
     let bookmarksVM = BookmarksVM()
-    
-    func getArticle() {
-        //TODO:
-    }
-    
+
     // Save to database(CoreData)
     func post(bookmarkImageView: Data, bookmarkTitle: String, bookmarkDesc: String) {
         
@@ -51,6 +47,10 @@ class DetailModel {
             print("Error fetching data from context, \(error)")
         }
         AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
+    }
+    
+    func detailString() -> String {
+        return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
     }
 
 }

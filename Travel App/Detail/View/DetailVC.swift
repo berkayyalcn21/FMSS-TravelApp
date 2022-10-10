@@ -8,8 +8,6 @@
 import UIKit
 
 class DetailVC: UIViewController {
-
-    let descText: String = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -60,14 +58,14 @@ class DetailVC: UIViewController {
                 imageView.image = UIImage(named: "bg-8-1")
                 categoryLabel.text = "Flight Travel"
                 titleLabel.text = data.listTitle
-                descLabel.text = descText
+                descLabel.text = detailViewModel.descText()
             }
         case .hotel:
             if let data = data as? ListEntity {
                 imageView.image = UIImage(named: "bg-6")
                 categoryLabel.text = "Hotel Travel"
                 titleLabel.text = data.listTitle
-                descLabel.text = descText
+                descLabel.text = detailViewModel.descText()
             }
         case .bookmark:
             if let data = data as? BookmarksEntity {

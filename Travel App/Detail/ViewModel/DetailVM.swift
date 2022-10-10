@@ -29,6 +29,11 @@ class DetailVM {
     func sendDataDelete(name: String) {
         model.delete(name: name)
     }
+    
+    // Description Text
+    func descText() -> String {
+        model.detailString()
+    }
 }
 
 extension DetailVM: DetailModelToDetailVMProtocol {
