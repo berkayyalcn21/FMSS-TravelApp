@@ -33,6 +33,5 @@ class SearchModel {
             guard let self = self else { return }
             self.flightList = self.model.flightList
         }
-        
     }
 }
